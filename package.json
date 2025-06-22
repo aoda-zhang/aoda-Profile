@@ -40,7 +40,6 @@
     "react-i18next": "^15.5.3",
     "rehype-highlight": "^7.0.2",
     "sass": "^1.89.2",
-    "sharp": "^0.33.5",
     "usehooks-ts": "^2.16.0",
     "zustand": "^4.5.7"
   },
