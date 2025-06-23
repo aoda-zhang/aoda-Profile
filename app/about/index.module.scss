@@ -1,15 +1,15 @@
 @import "@style";
 
 .about {
-  margin: 1.875rem auto;
   .line {
-    padding: 1.875rem 0;
+    padding-bottom: 1.875rem;
     margin-bottom: 1.875rem;
     border-bottom: 1px solid $gray4;
   }
   .boldText {
-    font-size: 1.625rem;
-    font-weight: bold;
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 3.25rem;
   }
 
   .profile {
@@ -78,5 +78,39 @@
     }
   }
   .experience {
+    .experienceItem{
+      display: flex;
+      align-items: center;
+      gap: 20%;
+      margin-left: 10%;
+      margin-bottom: 4.75rem;
+      &:first-child {
+        margin-top: 1.25rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .left {
+        width: 34%;
+        text-align: center;
+        .componyIcon {
+          width: auto;
+          height: 2.5rem;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        gap: .375rem;
+        .role {
+          color: $gray6;
+        }
+        .componyName {
+          font-size: 1.875rem;
+          font-weight: 600;
+        }
+      }
+      
+    }
   }
 }

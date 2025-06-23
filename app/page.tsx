@@ -3,7 +3,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
 
-import me from "@/public/images/me.webp";
+import avatar from "@/public/images/avatar.jpeg";
 import pageKeys from "@/constants/pageKey";
 
 import styles from "./page.module.scss";
@@ -11,7 +11,7 @@ import styles from "./page.module.scss";
 function Home() {
   return (
     <div className={styles.homeContent}>
-      <Image className={styles.left} src={me} alt={""} />
+      <Image className={styles.left} src={avatar} alt={""} />
 
       <div className={styles.right}>
         <p>
@@ -25,12 +25,12 @@ function Home() {
           Full Stack Software Developer
         </p>
         <p className={styles.content}>
-          MERN-focused full-stack developer with 8+ years of experience, skilled
-          in React, NestJS, MongoDB, and Azure, building scalable and modern web
-          applications.
+          With 8+ years of experience, specializing in the MERN stack (MongoDB,
+          NestJS, React, Node.js), I love turning ideas into high-quality
+          applications with modern technologies.
         </p>
         <div className={styles.buttons}>
-          <span className={styles.button}>My Project</span>
+          <span className={styles.button}>See My Project</span>
           <Link className={styles.button} href={`/${pageKeys.about}`}>
             About Me
           </Link>
