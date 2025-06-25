@@ -30,7 +30,7 @@ function Home() {
           applications with modern technologies.
         </p>
         <div className={styles.buttons}>
-          <span className={styles.button}>See My Project</span>
+          {/* <span className={styles.button}>See My Project</span> */}
           <Link className={styles.button} href={`/${pageKeys.about}`}>
             About Me
           </Link>
