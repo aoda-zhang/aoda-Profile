@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, memo, useMemo, useState } from "react";
+import React, { FC, memo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import classnames from "classnames";
@@ -10,7 +10,6 @@ import lightTheme from "@/public/images/moon.svg";
 import dayTheme from "@/public/images/sun.svg";
 import globalStore from "@/store/globalStore";
 import me from "@/public/images/me.webp";
-import LanguageKeys from "@/constants/languageKeys";
 import pageKeys from "@/constants/pageKey";
 
 import styles from "./index.module.scss";
@@ -18,11 +17,11 @@ import styles from "./index.module.scss";
 const menuKeys = [
   {
     key: "FrontEnd",
-    href: `/${pageKeys.blog}`,
+    href: `/${pageKeys.fe}`,
   },
   {
     key: "BackEnd",
-    href: `/${pageKeys.blog}`,
+    href: `/${pageKeys.be}`,
   },
   {
     key: "About Me",

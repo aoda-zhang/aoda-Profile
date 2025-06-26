@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import avatar from "@/public/images/avatar.jpeg";
 import pageKeys from "@/constants/pageKey";
@@ -9,9 +11,17 @@ import pageKeys from "@/constants/pageKey";
 import styles from "./page.module.scss";
 
 function Home() {
+  const router = useRouter();
   return (
     <div className={styles.homeContent}>
-      <Image className={styles.left} src={avatar} alt={""} />
+      <Image
+        className={styles.left}
+        src={avatar}
+        alt={""}
+        onClick={() => {
+          router.push(`/${pageKeys.about}`);
+        }}
+      />
 
       <div className={styles.right}>
         <p>

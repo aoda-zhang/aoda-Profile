@@ -21,17 +21,10 @@ const ComponentOptions = [
     componyHref: "https://www.manulife.com",
     description: (
       <div>
-        As a member of the GWAM team, mainly responsible for developing and
-        maintaining the fund trading platform in Southeast Asia. - Responsible
-        for the front-end and back-end system design and code development of
-        important modules.
-        <br />
-        - Responsible for monthly regression testing.
-        <br />
-        - Summarize and write detailed business documents and present them to
-        the marking team.
-        <br />
-        - Support prod issue repair by emergency team.
+        As a member of the GWAM iFunds team, mainly responsible for developing
+        and maintaining the fund trading platform in Southeast Asia. -
+        Responsible for the front-end and back-end system design and code
+        development of important modules.
         <br />
       </div>
     ),
@@ -52,9 +45,11 @@ const ComponentOptions = [
     componyHref: "https://www.newegg.com/sellers",
     description: (
       <div>
-        As a member of MKPL, mainly responsible for developing and maintaining
-        Newegg’s merchant backend web site and mobile app (Newegg Seller) . -
-        Based on qiankun, responsible for completing the micro-front-end
+        As a member of MKPL team, mainly responsible for developing and
+        maintaining Newegg’s merchant backend web site and mobile app (Newegg
+        Seller).
+        <br />
+        - Based on qiankun, responsible for completing the micro-front-end
         architecture transformation of the old business.
         <br />- Lead the front-end engineering work of the react technology
         stack project team, including technology selection, directory structure
@@ -134,8 +129,9 @@ const About: FC = () => {
         <div className={styles.skillItem}>
           <p className={styles.title}>Libraries & Frameworks</p>
           <p className={styles.text}>
-            FrontEnd: &nbsp;&nbsp;&nbsp;React, React Native, React-Query,
-            React-Hook-Form, Vite, Zustand, Redux, Tailwind CSS, Next.js
+            FrontEnd: &nbsp;&nbsp;&nbsp;React, React Native, Next.js, Redux,
+            React-Query, React-Hook-Form, Zustand, Tailwind CSS
+            <br />
             <br />
             BackEnd: &nbsp;&nbsp;&nbsp;Node.js, Express.js, Nest.js, MongoDB,
             MySQL
@@ -144,7 +140,7 @@ const About: FC = () => {
         <div className={styles.skillItem}>
           <p className={styles.title}>Tools</p>
           <p className={styles.text}>
-            Git, GitHub, Netlify, Vercel, Docker, Azure, Webpack, Figma
+            Git, GitHub, Vercel, Netlify, Docker, Azure, Vite, Webpack, Figma
           </p>
         </div>
       </div>
@@ -164,18 +160,14 @@ const About: FC = () => {
                   src={item?.icon}
                   alt={""}
                 />
+                <p className={styles.date}>{item?.workDate}</p>
               </Link>
             </div>
             <div className={styles.right}>
               <p
                 className={styles.componyName}
               >{`${item?.role}  -  ${item?.name}`}</p>
-              <p className={styles.role}>
-                {item?.role}
-                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-                {item?.workDate}
-              </p>
-              <div className={styles.role}>{item?.description}</div>
+              <div className={styles.description}>{item?.description}</div>
               <p>
                 {item?.skills?.map(skill => (
                   <span key={skill} className={styles.skillItem}>

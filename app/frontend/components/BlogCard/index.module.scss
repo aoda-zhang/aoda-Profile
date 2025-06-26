@@ -1,0 +1,12 @@
+@import "@style";
+
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  .conver {
+    border-radius: 0.625rem;
+    height: auto;
+    width: auto;
+  }
+}

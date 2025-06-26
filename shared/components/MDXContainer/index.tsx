@@ -26,18 +26,29 @@ const getMdxContent = (postPath: string, fileFolder: string) => {
   const filePath = path.join(postsDirectory, `${postPath}.mdx`);
   return fs.readFileSync(filePath, "utf-8");
 };
-const getCurrentPostOptions = async (postPath: string, fileFolder: string) => {
+const getCurrentPostOptions = async (
+  pageKey: string,
+  postPath: string,
+  fileFolder: string,
+) => {
   let currentPostLists: PostItemType[] = [];
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
 
-  if (fileFolder === `/${pageKeys.docs}/${pageKeys.blog}`) {
-    currentPostLists = (await import("@/docs/blogs/router")).default;
+  if (fileFolder === `/${pageKeys.docs}/${pageKeys?.[pageKey]}`) {
+    currentPostLists = (await import(`@/docs/${String(pageKey)}/router`))
+      .default;
   }
   return currentPostLists?.find(item => item?.postPath === postPath);
 };
 
 export default async function MDXContainer(params: ItemType) {
-  const { postPath, fileFolder } = params;
-  const currentPost = await getCurrentPostOptions(postPath, fileFolder);
+  const { postPath, fileFolder, pageKey } = params;
+  const currentPost = await getCurrentPostOptions(
+    pageKey,
+    postPath,
+    fileFolder,
+  );
   const isContentEmpty = Boolean(getMdxContent(postPath, fileFolder));
 
   return (

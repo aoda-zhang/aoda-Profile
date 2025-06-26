@@ -20,7 +20,8 @@ export type MDFileOption = {
 };
 export enum RoutePath {
   home = "home",
-  blogs = "blogs",
+  frontend = "frontend",
+  backend = "backend",
   about = "about",
 }
 
@@ -34,9 +35,9 @@ export type PostItemType = {
 };
 
 export type ItemType = {
+  pageKey: string;
   postPath: string;
   fileFolder: string;
-  locale: LanguageKeys;
 };
 
 export type PostItemParam = {
