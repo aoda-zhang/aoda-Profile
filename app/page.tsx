@@ -1,53 +1,44 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import classNames from "classnames";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-import avatar from "@/public/images/avatar.jpeg";
-import pageKeys from "@/constants/pageKey";
+import Particles from "@tsparticles/react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Projects } from "@/components/Projects";
+import { Experience } from "@/components/Experience";
+import { Skills } from "@/components/Skills";
+import Hero from "@/components/Hero";
 
-import styles from "./page.module.scss";
-
-function Home() {
-  const router = useRouter();
+export default function Home() {
   return (
-    <div className={styles.homeContent}>
-      <Image
-        className={styles.left}
-        src={avatar}
-        alt={""}
-        onClick={() => {
-          router.push(`/${pageKeys.about}`);
-        }}
-      />
+    <div className="min-h-screen bg-[#0D0D0D] text-[#E0E0E0] font-mono relative overflow-hidden">
+      <Header />
+      <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+        <Hero/>
+        <Skills />
+        <Experience />
+        <Projects />
 
-      <div className={styles.right}>
-        <p>
-          <span>HI THERE! 👋</span>
-          <span style={{ marginLeft: "10px" }}>I&#39;M</span>
-        </p>
-        <p className={classNames([styles.title, styles.hightLight])}>
-          Aoda Zhang
-        </p>
-        <p className={classNames([styles.subTitle, styles.hightLight])}>
-          Full Stack Software Developer
-        </p>
-        <p className={styles.content}>
-          With 8+ years of experience, specializing in the MERN stack (MongoDB,
-          NestJS, React, Node.js), I love turning ideas into high-quality
-          applications with modern technologies.
-        </p>
-        <div className={styles.buttons}>
-          {/* <span className={styles.button}>See My Project</span> */}
-          <Link className={styles.button} href={`/${pageKeys.about}`}>
-            About Me
-          </Link>
-        </div>
-      </div>
+        {/* Contact */}
+        <section id="contact" className="text-center space-y-4">
+          <h3 className="text-2xl text-[#00FFC6]">/ Contact</h3>
+          <p>
+            Email me at{" "}
+            <a
+              href="mailto:you@example.com"
+              className="text-[#39FF14] underline"
+            >
+              you@example.com
+            </a>
+          </p>
+          <a
+            href="mailto:you@example.com"
+            className="inline-block px-6 py-3 border border-[#00FF00] neon-text glow-border rounded-lg transition hover:scale-105"
+          >
+            Send Message
+          </a>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default Home;

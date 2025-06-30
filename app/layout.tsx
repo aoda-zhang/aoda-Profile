@@ -1,47 +1,37 @@
-"use client";
-import React, { FC, memo } from "react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import classNames from "classnames";
-
-import Footer from "@/shared/components/Footer";
-import Header from "@/shared/components/Header";
-import "./layout.scss";
-import globalStore from "@/store/globalStore";
-
-const RootLayout: FC<{
-  children: React.ReactNode;
-  params: { locale: string };
-}> = ({ children }) => {
-  const { isDarkMode, locale } = globalStore();
-  return (
-    <html lang={locale}>
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-      </head>
-      <body>
-        <div
-          id="fullStackLayout"
-          className={classNames([isDarkMode ? "fullStackLayout_dark" : ""])}
-        >
-          <div className="headerBox">
-            <Header />
-          </div>
-
-          <div className="contentBox">
-            {children}
-            <SpeedInsights />
-          </div>
-
-          <div className="footerBox">
-            <Footer />
-          </div>
-        </div>
-      </body>
-    </html>
-  );
+export const metadata = {
+  title: "Aoda – Hacker‑Style Portfolio",
+  description:
+    "Full‑stack developer · Cybersecurity enthusiast · Open‑source contributor",
+  keywords: [
+    "Full‑stack",
+    "Developer",
+    "React",
+    "Next.js",
+    "Cyberpunk",
+    "Portfolio",
+  ],
+  authors: [{ name: "Aoda", url: "https://aoda.dev" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://aoda.dev",
+    title: "Aoda – Hacker‑Style Portfolio",
+    description: "Full‑stack developer & cyberpunk UI lover",
+    images: [{ url: "/og-cover.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@aoda",
+  },
 };
 
-export default memo(RootLayout);
+import "../styles/globals.css";
+import type { ReactNode } from "react";
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en" className="bg-[#0D0D0D] text-[#E0E0E0] font-mono">
+      <body>{children}</body>
+    </html>
+  );
+}
