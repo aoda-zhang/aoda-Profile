@@ -1,6 +1,5 @@
 "use client";
 
-import Particles from "@tsparticles/react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Projects } from "@/components/Projects";
@@ -13,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0D0D0D] text-[#E0E0E0] font-mono relative overflow-hidden">
       <Header />
       <main className="max-w-5xl mx-auto px-6 py-12 space-y-16">
-        <Hero/>
+        <Hero />
         <Skills />
         <Experience />
         <Projects />
