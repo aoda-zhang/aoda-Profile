@@ -12,7 +12,7 @@ const projects = [
 export function Projects() {
   return (
     <section id="projects" className="space-y-6 py-12">
-      <h3 className="text-2xl text-[#00FFC6] text-center">/ Projects</h3>
+      <h3 className="menu_title text-center">/ Projects</h3>
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map(p => (
           <div

@@ -26,3 +26,10 @@ Git, GitHub, Vercel, Netlify, Docker, Azure, Vite, Webpack, Figma
 
 
 With 8+ years of experience, specializing in the MERN stack (MongoDB, NestJS, React, Node.js), I love turning ideas into high-quality applications with modern technologies.
+
+
+
+Expertise
+frontend dev (react)
+backend dev (nodejs)
+cross platform dev (react native)

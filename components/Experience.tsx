@@ -1,14 +1,20 @@
 const experiences = [
   {
-    company: "Acme Corp",
-    role: "Senior Full‑stack Developer",
-    period: "2023 – Present",
+    company: "Manulife",
+    role: "Full‑stack Developer",
+    period: "2022 – Present",
     desc: "Leading cloud‑native services.",
   },
   {
-    company: "Globex Inc.",
-    role: "Full‑stack Engineer",
-    period: "2020 – 2023",
+    company: "Newegg",
+    role: "Senior FrontEnd Developer",
+    period: "2021 – 2022",
+    desc: "Built MERN apps & CI/CD.",
+  },
+  {
+    company: "Hucais",
+    role: "FrontEnd Developer",
+    period: "2017 – 2021",
     desc: "Built MERN apps & CI/CD.",
   },
 ];
@@ -16,7 +22,7 @@ const experiences = [
 export function Experience() {
   return (
     <section id="experience" className="space-y-6 py-12">
-      <h3 className="text-2xl text-[#00FFC6] text-center">/ Experience</h3>
+      <h3 className="menu_title text-[#00FFC6] text-center">/ Experience</h3>
       <div className="relative border-l-2 border-[#00FFC6] ml-4 pl-6 space-y-8">
         {experiences.map((e, i) => (
           <div key={i} className="space-y-1">
