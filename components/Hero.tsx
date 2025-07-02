@@ -8,11 +8,13 @@ export default function Hero() {
   const [Player, setPlayer] = useState<
     typeof import("@lottiefiles/react-lottie-player").Player | null
   >(null);
+  
   useEffect(() => {
     import("@lottiefiles/react-lottie-player").then((module) => {
       setPlayer(() => module.Player);
     });
   }, []);
+
   if (!Player) {
     return null;
   }

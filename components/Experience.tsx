@@ -4,18 +4,42 @@ const experiences = [
     role: "Full‑stack Developer",
     period: "2022 – Present",
     desc: "Leading cloud‑native services.",
+    techs: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+    ],
   },
   {
     company: "Newegg",
     role: "Senior FrontEnd Developer",
     period: "2021 – 2022",
     desc: "Built MERN apps & CI/CD.",
+    techs: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+    ],
   },
   {
     company: "Hucais",
     role: "FrontEnd Developer",
     period: "2017 – 2021",
     desc: "Built MERN apps & CI/CD.",
+    techs: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+    ],
   },
 ];
 
@@ -32,6 +56,14 @@ export function Experience() {
             </h4>
             <span className="text-sm text-gray-400">{e.period}</span>
             <p className="text-gray-300">{e.desc}</p>
+            {e?.techs?.map((tech, index) => (
+              <span
+                key={index}
+                className="inline-block bg-secondary text-black px-2 py-1 rounded-md text-xs mr-2 mb-2"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         ))}
       </div>
