@@ -3,11 +3,13 @@ const experiences = [
     company: "Manulife",
     role: "Full‑stack Developer",
     period: "2022 – Present",
-    desc: "Leading cloud‑native services.",
+    desc: "Built MERN apps & CI/CD.",
     techs: [
       "JavaScript",
       "TypeScript",
       "React",
+      "Vite",
+      "Tailwind CSS",
       "Node.js",
       "NestJS",
       "MongoDB",
@@ -18,39 +20,26 @@ const experiences = [
     role: "Senior FrontEnd Developer",
     period: "2021 – 2022",
     desc: "Built MERN apps & CI/CD.",
-    techs: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "NestJS",
-      "MongoDB",
-    ],
+    techs: ["JavaScript", "TypeScript", "React", "React Native", "Vite"],
   },
   {
     company: "Hucais",
     role: "FrontEnd Developer",
     period: "2017 – 2021",
     desc: "Built MERN apps & CI/CD.",
-    techs: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Node.js",
-      "NestJS",
-      "MongoDB",
-    ],
+    techs: ["JavaScript", "React", "Vue.js"],
   },
 ];
 
 export function Experience() {
   return (
     <section id="experience" className="space-y-6 py-12">
-      <h3 className="menu_title text-[#00FFC6] text-center">/ Experience</h3>
-      <div className="relative border-l-2 border-[#00FFC6] ml-4 pl-6 space-y-8">
+      <h3 className="menu_title text-secondary text-center mb-20">
+        / Experience
+      </h3>
+      <div className="relative border-l-2 border-secondary ml-4 pl-6 space-y-8">
         {experiences.map((e, i) => (
           <div key={i} className="space-y-1">
-            <span className="absolute -left-3 top-1.5 h-3 w-3 rounded-full bg-[#00FFC6]" />
             <h4 className="text-xl neon-text">
               {e.role} @ {e.company}
             </h4>
@@ -59,7 +48,7 @@ export function Experience() {
             {e?.techs?.map((tech, index) => (
               <span
                 key={index}
-                className="inline-block bg-secondary text-black px-2 py-1 rounded-md text-xs mr-2 mb-2"
+                className="inline-block text-text-secondary text-md mr-4 mb-2"
               >
                 {tech}
               </span>

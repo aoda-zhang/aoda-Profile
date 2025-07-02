@@ -108,5 +108,5 @@
 }
 
 .menu_title {
-  @apply text-2xl text-secondary;
+  @apply text-3xl text-secondary;
 }

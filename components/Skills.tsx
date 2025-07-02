@@ -36,7 +36,7 @@ const cardVariants: Variants = {
 export default function Skills() {
   return (
     <section id="skills" className="text-center mt-40 px-4">
-      <h2 className="menu_title mb-6">/ Skills</h2>
+      <h2 className="menu_title mb-20">/ Skills</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {expertiseData.map((exp, i) => (

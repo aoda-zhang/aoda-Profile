@@ -8,7 +8,7 @@ export default function Hero() {
   const [Player, setPlayer] = useState<
     typeof import("@lottiefiles/react-lottie-player").Player | null
   >(null);
-  
+
   useEffect(() => {
     import("@lottiefiles/react-lottie-player").then((module) => {
       setPlayer(() => module.Player);
@@ -25,7 +25,7 @@ export default function Hero() {
       className="relative flex flex-col items-center text-center space-y-6 min-h-[80vh] overflow-hidden"
     >
       <motion.div
-        className="text-4xl md:text-7xl neon-text mt-40 font-bold"
+        className="text-5xl md:text-8xl neon-text mt-40 font-bold"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
