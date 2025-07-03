@@ -1,10 +1,14 @@
+import menuMappings from "@/constants/menuMappings";
 import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="about" className="mt-20 px-4 text-text-secondary">
+    <section
+      id={menuMappings.about.id}
+      className="mt-20 px-4 text-text-secondary"
+    >
       <h2 className="text-secondary menu_title mb-20 text-center">
-        / About Me
+        {menuMappings.about.title}
       </h2>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">

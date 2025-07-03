@@ -1,3 +1,4 @@
+import menuMappings from "@/constants/menuMappings";
 import { motion, Variants } from "framer-motion";
 
 const expertiseData = [
@@ -5,8 +6,15 @@ const expertiseData = [
     key: "frontend",
     title: "Frontend Dev (React)",
     description:
-      "Crafting pixel-perfect, accessible UIs with React and a modern tooling stack.",
-    skills: ["Javascript", "Typescript", "React", "Next.js", "Tailwind CSS"],
+      "Building responsive, user-friendly web things with modern tools and techniques",
+    skills: [
+      "Javascript",
+      "Typescript",
+      "React",
+      "Redux",
+      "Scss",
+      "Tailwind CSS",
+    ],
   },
   {
     key: "backend",
@@ -33,10 +41,10 @@ const cardVariants: Variants = {
   }),
 };
 
-export default function Skills() {
+export default function Expertise() {
   return (
-    <section id="skills" className="text-center mt-40 px-4">
-      <h2 className="menu_title mb-20">/ Skills</h2>
+    <section id={menuMappings.expertise.id} className="text-center mt-40 px-4">
+      <h2 className="menu_title mb-20">{menuMappings.expertise.title}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {expertiseData.map((exp, i) => (
@@ -49,10 +57,10 @@ export default function Skills() {
             custom={i}
             variants={cardVariants}
           >
-            <h3 className="text-neon-green text-lg font-bold mb-2 glow-text">
+            <h3 className="text-neon-green text-lg font-bold mb-4 glow-text">
               {exp.title}
             </h3>
-            <p className="text-text-secondary text-sm mb-3">
+            <p className="text-text-secondary text-sm mb-4">
               {exp.description}
             </p>
 

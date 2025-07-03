@@ -22,10 +22,10 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative flex flex-col items-center text-center space-y-6 min-h-[80vh] overflow-hidden"
+      className="relative flex flex-col items-center text-center space-y-6 min-h-[80vh]"
     >
       <motion.div
-        className="text-5xl md:text-8xl neon-text mt-40 font-bold"
+        className="text-5xl md:text-8xl neon-text mt-32 font-bold"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
