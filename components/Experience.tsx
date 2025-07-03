@@ -1,5 +1,6 @@
 import menuMappings from "@/constants/menuMappings";
 import { MoveUpRight } from "lucide-react";
+import Image from "next/image";
 
 const experiences = [
   {
@@ -65,8 +66,8 @@ export function Experience() {
                 <>
                   {e.role} @ {e.company}
                   {e.logo && (
-                    <img
-                      src={e.logo}
+                    <Image
+                      src={e?.logo}
                       alt={e.company}
                       className="h-8 w-auto object-contain"
                     />

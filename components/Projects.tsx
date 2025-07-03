@@ -1,14 +1,14 @@
 import menuMappings from "@/constants/menuMappings";
 
-const projects: any[] = [
-  // {
-  //   title: "🔐 Terminal Login UI",
-  //   desc: "Pure CSS/JS terminal‑style login screen.",
-  // },
-  // {
-  //   title: "📦 Docker Dashboard",
-  //   desc: "Live Docker monitor with neon graphs.",
-  // },
+const projects = [
+  {
+    title: "🔐 Terminal Login UI",
+    desc: "Pure CSS/JS terminal‑style login screen.",
+  },
+  {
+    title: "📦 Docker Dashboard",
+    desc: "Live Docker monitor with neon graphs.",
+  },
 ];
 
 export function Projects() {
