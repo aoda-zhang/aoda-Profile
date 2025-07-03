@@ -48,7 +48,7 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="space-y-6 py-12">
+    <section id={menuMappings.experience.id} className="space-y-6 py-12">
       <h3 className="menu_title text-secondary text-center mb-20">
         {menuMappings.experience.title}
       </h3>
