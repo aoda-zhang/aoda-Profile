@@ -22,13 +22,17 @@ export const metadata = {
   },
 };
 
+import SocialLinks from "@/components/SocialLinks";
 import "../styles/globals.css";
 import type { ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="bg-background text-[#E0E0E0] font-mono">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SocialLinks />
+      </body>
     </html>
   );
 }

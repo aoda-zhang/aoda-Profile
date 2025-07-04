@@ -35,8 +35,8 @@ const Header = () => {
         <a href={menuMappings.about.anchor} className="hover:underline">
           {menuMappings.about.label}
         </a>
-        <a href={menuMappings.expertise.anchor} className="hover:underline">
-          {menuMappings.expertise.label}
+        <a href={menuMappings.skill.anchor} className="hover:underline">
+          {menuMappings.skill.label}
         </a>
         <a href={menuMappings.experience.anchor} className="hover:underline">
           {menuMappings.experience.label}

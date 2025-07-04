@@ -43,7 +43,7 @@ const experiences = [
     desc: "Built MERN apps & CI/CD.",
     url: "https://www.hucais.com",
     logo: "/assets/images/hucais.png",
-    techs: ["JavaScript", "TypeScript", "React", "Vue.js"],
+    techs: ["JavaScript", "TypeScript", "React", "Vue.js", "Scss"],
   },
 ];
 
@@ -69,7 +69,9 @@ export function Experience() {
                     <Image
                       src={e?.logo}
                       alt={e.company}
-                      className="h-8 w-auto object-contain"
+                      width={34}
+                      height={34}
+                      className="h-auto object-contain"
                     />
                   )}
                   <MoveUpRight />

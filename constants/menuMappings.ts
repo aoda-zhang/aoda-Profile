@@ -5,11 +5,11 @@ const menuMappings = {
         id: "about",
         title: '/ About Me',
     },
-    expertise: {
-        label: '02. Expertise',
-        anchor: '#expertise',
-        id: "expertise",
-        title: '/ My Expertise',
+    skill: {
+        label: '02. Skills',
+        anchor: '#skill',
+        id: "skill",
+        title: '/ My Skills',
     },
     experience: {
         label: '03. Experience',

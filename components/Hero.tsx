@@ -25,7 +25,7 @@ export default function Hero() {
       className="relative flex flex-col items-center text-center space-y-6 min-h-[80vh]"
     >
       <motion.div
-        className="text-5xl md:text-8xl neon-text mt-32 font-bold"
+        className="text-5xl md:text-8xl neon-text mt-32 mb-10 font-bold"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -39,9 +39,9 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        With 8+ years of experience, specializing in the MERN stack (MongoDB,
-        NestJS, React, Node.js), I love turning ideas into high-quality
-        applications with modern technologies.
+        With 8+ years of development experience, specializing in the MERN stack
+        (MongoDB, NestJS, React, Node.js), I love turning ideas into
+        high-quality applications with modern technologies.
       </motion.div>
 
       <div className="absolute bottom-4">

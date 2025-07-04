@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #00ff00;
   --color-secondary: #00ffc6;
-  --color-background: #0D0D0D;
+  --color-background: #0d0d0d;
   --color-text: #111827;
   --color-text-secondary: #9ca3af;
   --color-border: #cbd5e1;
@@ -51,25 +51,26 @@
   --line-height-xl: 1.75rem;
 
   /* === Font Families === */
-  --font-family-sans: 'Inter', sans-serif;
-  --font-family-serif: 'Merriweather', serif;
-  --font-family-mono: 'Menlo', monospace;
+  --font-family-sans: "Inter", sans-serif;
+  --font-family-serif: "Merriweather", serif;
+  --font-family-mono: "Menlo", monospace;
   --font-size-base: 16px;
   --font-size-lg: 1.125rem;
 }
 
 @layer base {
-
   :root {
     --background: #ffffff;
     --foreground: #171717;
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --background: #171717;
       --foreground: #ffffff;
     }
   }
+
   html {
     font-size: 16px;
     width: 100vw;
@@ -97,15 +98,29 @@
 }
 
 .neon-ring {
-  box-shadow:
-    0 0 5px var(--color-primary),
-    0 0 10px var(--color-primary),
-    0 0 20px var(--color-primary),
-    0 0 40px var(--color-primary);
+  box-shadow: 0 0 5px var(--color-primary), 0 0 10px var(--color-primary),
+    0 0 20px var(--color-primary), 0 0 40px var(--color-primary);
+}
+
+.animate-ring {
+  @apply absolute inset-0 rounded-full animate-pulse pointer-events-none ring-4 ring-primary blur-sm group-hover:blur-lg transition-[filter] duration-500;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
 }
 
 .glow-border {
   box-shadow: 0 0 4px var(--color-primary), 0 0 20px var(--color-primary);
+}
+
+.transition-border {
+  @apply bg-black/30 border border-gray-700 rounded-xl p-6 shadow-md transition-shadow duration-400;
+  @apply transform transition-transform ease-out duration-300;
+}
+
+.transition-border:hover {
+  @apply -translate-y-2 shadow-neon-green/60;
 }
 
 .menu_title {

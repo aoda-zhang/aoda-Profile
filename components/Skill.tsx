@@ -43,14 +43,14 @@ const cardVariants: Variants = {
 
 export default function Expertise() {
   return (
-    <section id={menuMappings.expertise.id} className="text-center mt-40 px-4">
-      <h2 className="menu_title mb-20">{menuMappings.expertise.title}</h2>
+    <section id={menuMappings.skill.id} className="text-center mt-40 px-4">
+      <h2 className="menu_title mb-20">{menuMappings.skill.title}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {expertiseData.map((exp, i) => (
           <motion.div
             key={exp.key}
-            className="bg-black/30 border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-neon-green/60 transition-shadow duration-300"
+            className="transition-border"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.2 }}
