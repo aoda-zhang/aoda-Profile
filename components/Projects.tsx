@@ -1,6 +1,6 @@
 import menuMappings from "@/constants/menuMappings";
 
-const projects: Record<string, any>[] = [];
+const projects: Record<string, string>[] = [];
 
 export function Projects() {
   return (

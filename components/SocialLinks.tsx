@@ -1,7 +1,6 @@
 "use client";
 
 import extractEmail from "@/utils/getEmailFromEmailHref";
-import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
