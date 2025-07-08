@@ -46,7 +46,7 @@ const Header = () => {
         </a>
         {
           <a href="#projects" className="px-6 hover:glow-border">
-            Resume
+            {menuMappings.resume.label}
           </a>
         }
       </nav>

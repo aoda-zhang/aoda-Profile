@@ -4,8 +4,8 @@ const projects: Record<string, string>[] = [];
 
 export function Projects() {
   return (
-    <section id={menuMappings.projects.id} className="space-y-6 py-12">
-      <h3 className="menu_title text-center">{menuMappings.projects.title}</h3>
+    <section id={menuMappings?.projects?.id} className="space-y-6 py-12">
+      <h3 className="menu_title text-center">{menuMappings.projects?.title}</h3>
       <div className="grid md:grid-cols-2 gap-6">
         {projects?.map((p) => (
           <div

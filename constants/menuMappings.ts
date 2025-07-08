@@ -17,11 +17,20 @@ const menuMappings = {
         id: "experience",
         title: '/ Work Experiences',
     },
+    resume: {
+        label: '',
+    },
+    // projects: {
+    //     label: '04. Projects',
+    //     anchor: '#projects',
+    //     id: "projects",
+    //     title: '/ Side Projects',
+    // },
     projects: {
-        label: '04. Projects',
-        anchor: '#projects',
-        id: "projects",
-        title: '/ Side Projects',
+        label: '',
+        anchor: '',
+        id: "",
+        title: '',
     },
 }
 export default menuMappings

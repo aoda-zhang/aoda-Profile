@@ -7,7 +7,27 @@ const experiences = [
     company: "Manulife",
     role: "Full‑stack Developer",
     period: "2022 – Present",
-    desc: "Built MERN apps & CI/CD.",
+    desc: (
+      <ul className="space-y-3 list-disc pl-5">
+        <li>
+          As a member of GWAM ,Collaborated with PM, QA, and global development
+          teams to deliver high-quality features through Agile sprints.
+        </li>
+        <li>
+          Led the requirement analysis, design, and implementation of the
+          trading report module in the fund trading system.
+        </li>
+        <li>
+          Participated in the design and development of backend microservices
+          for the fund trading system, focusing on modularity and performance.
+        </li>
+        <li>
+          Contributed to the team’s CI/CD pipeline setup and maintenance using
+          GitHub Actions, supporting continuous integration and delivery
+          workflows.
+        </li>
+      </ul>
+    ),
     url: "https://www.manulifeim.com/",
     logo: "/assets/images/manulife.svg",
     techs: [
@@ -24,7 +44,30 @@ const experiences = [
     company: "Newegg",
     role: "Senior FrontEnd Developer",
     period: "2021 – 2022",
-    desc: "Built MERN apps & CI/CD.",
+    desc: (
+      <ul className="space-y-3 list-disc pl-5">
+        <li>
+          As a member of MKPL, I led the selection and migration of the
+          front-end technology stack.
+        </li>
+        <li>
+          Lead the design and development of the team's component library to
+          ensure the reusability and consistency of the component library.
+        </li>
+        <li>
+          Push the team to formulate front-end technical specifications and best
+          practices.
+        </li>
+        <li>
+          Guide junior front-end developers to help them improve their skills
+          and solve technical problems.
+        </li>
+        <li>
+          Responsible for the design, development and maintenance of important
+          modules of the seller web and mobile terminal.
+        </li>
+      </ul>
+    ),
     url: "https://partner.newegg.com/",
     logo: "/assets/images/newegg.png",
     techs: [
@@ -78,8 +121,8 @@ export function Experience() {
                 </>
               </a>
             </h4>
-            <span className="text-sm text-gray-400">{e.period}</span>
-            <p className="text-text-secondary">{e.desc}</p>
+            <span className="text-sm text-gray-400">{e?.period}</span>
+            <div className="text-text-secondary">{e?.desc}</div>
             {e?.techs?.map((tech, index) => (
               <span
                 key={index}
