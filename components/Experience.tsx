@@ -14,7 +14,7 @@ const experiences = [
       "TypeScript",
       "React",
       "Redux",
-      "Vite",
+      "Tailwind CSS",
       "Node.js",
       "NestJS",
       "MongoDB",
@@ -32,7 +32,7 @@ const experiences = [
       "TypeScript",
       "React",
       "React Native",
-      "Tailwind CSS",
+      "Scss",
       "Vite",
     ],
   },
@@ -53,7 +53,7 @@ export function Experience() {
       <h3 className="menu_title text-secondary text-center mb-20">
         {menuMappings.experience.title}
       </h3>
-      <div className="relative border-l-2 border-secondary ml-4 pl-6 space-y-8">
+      <div className="relative border-l-2 border-secondary ml-4 pl-6 space-y-4">
         {experiences.map((e, i) => (
           <div key={i} className="space-y-1">
             <h4 className="text-xl neon-text flex items-center gap-2">

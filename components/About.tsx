@@ -14,24 +14,24 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            My career began in college when I built my first website with basic
-            HTML and CSS - an experience that sparked a lifelong passion for
-            front-end technologies.
+            My journey in software development began in university, when I built
+            my first website using basic HTML and CSS — an experience that
+            sparked a deep passion for coding and digital creativity.
           </p>
           <p>
-            Over the years, I have mastered modern front-end and cross-end
-            development tools such as JavaScript, TypeScript, Redux, and Vite,
-            and gradually expanded to back-end development. I have worked in
-            startups and huge corporations, accumulating practical experience in
-            agile iteration, scalable architecture, and system-level thinking,
-            and excels in end-to-end development, from back-end APIs to
-            intuitive user interfaces.
+            Over the years, I’ve developed strong expertise across modern
+            frontend, backend, and cross-platform technologies, including
+            JavaScript, TypeScript, React, and Node.js. I’ve worked in both
+            startups and large enterprises, gaining hands-on experience in agile
+            development, scalable architecture, and system-level thinking.
+            Today, I truly enjoy the end-to-end development process — from
+            backend APIs to frontend interfaces — as it gives me a more holistic
+            understanding of how great digital products are built and evolved.
           </p>
           <p>
-            Now, I work as a full-stack developer at a large international
-            financial company from Canada, collaborating with global teams to
-            contribute to the system architecture and development of fund
-            transactions.
+            Currently, I work as a full-stack developer at a major international
+            financial institution from Canada, collaborating with global teams
+            to architect and build systems that support fund trading at scale.
           </p>
         </div>
         <div className="relative w-80 h-80 group cursor-pointer">

@@ -32,16 +32,24 @@ export default function Hero() {
       >
         Hi, I&#39;m Aoda
       </motion.div>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+        className="text-gray-300 tracking-wider text-lg"
+      >
+        Full-Stack Developer • Frontend Developer • Cross-Platform Developer
+      </motion.p>
 
       <motion.div
-        className="text-text-secondary px-4"
+        className="text-text-secondary text-lg px-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        With 8+ years of development experience, specializing in the MERN stack
-        (MongoDB, NestJS, React, Node.js), I love turning ideas into
-        high-quality applications with modern technologies.
+        With 8+ years of experience, I’m passionate about turning ideas into
+        high-quality digital products using the MERN stack (MongoDB, Express.js,
+        React, Node.js), and I’m always exploring what’s next.
       </motion.div>
 
       <div className="absolute bottom-4">
