@@ -8,7 +8,7 @@ const experiences = [
     role: "Full‑stack Developer",
     period: "2022 – Present",
     desc: (
-      <ul className="space-y-3 list-disc pl-5">
+      <ul className="space-y-2 list-disc pl-5">
         <li>
           As a member of GWAM ,Collaborated with PM, QA, and global development
           teams to deliver high-quality features through Agile sprints.
@@ -45,14 +45,14 @@ const experiences = [
     role: "Senior FrontEnd Developer",
     period: "2021 – 2022",
     desc: (
-      <ul className="space-y-3 list-disc pl-5">
+      <ul className="space-y-2 list-disc pl-5">
         <li>
           As a member of MKPL, I led the selection and migration of the
           front-end technology stack.
         </li>
         <li>
-          Lead the design and development of the team's component library to
-          ensure the reusability and consistency of the component library.
+          Lead the design and development of the team&lsquo;s component library
+          to ensure the reusability and consistency of the component library.
         </li>
         <li>
           Push the team to formulate front-end technical specifications and best
@@ -122,7 +122,7 @@ export function Experience() {
               </a>
             </h4>
             <span className="text-sm text-gray-400">{e?.period}</span>
-            <div className="text-text-secondary">{e?.desc}</div>
+            <div className="text-text-secondary my-4">{e?.desc}</div>
             {e?.techs?.map((tech, index) => (
               <span
                 key={index}
