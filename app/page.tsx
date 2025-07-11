@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Projects } from "@/components/Projects";
-import { Experience } from "@/components/Experience";
+import Experience from "@/components/Experience";
 import Skill from "@/components/Skill";
 import Hero from "@/components/Hero";
 import About from "@/components/About";

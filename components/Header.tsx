@@ -6,7 +6,7 @@ const Header = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 160);
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -14,23 +14,20 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full px-10 py-8 flex items-center bg-black/80 backdrop-blur transition-all duration-300 ${
-        scrolled ? "justify-center" : "justify-between"
-      }`}
+      className={`sticky top-0 z-50 w-full px-10 py-8 flex items-center bg-black/80 backdrop-blur transition-all duration-300 ${scrolled ? "justify-center" : "justify-between"
+        }`}
     >
       <h1
-        className={`neon-text text-2xl transition-all duration-500 ease-in-out transform ${
-          scrolled
+        className={`neon-text text-2xl transition-all duration-500 ease-in-out transform ${scrolled
             ? "opacity-0 scale-90 pointer-events-none"
             : "opacity-100 scale-100"
-        }`}
+          }`}
       >
         &gt; Aoda
       </h1>
       <nav
-        className={`space-x-6 text-secondary transition-all duration-500 ease-in-out transform ${
-          scrolled ? "scale-105" : "scale-100"
-        }`}
+        className={`space-x-6 text-secondary transition-all duration-500 ease-in-out transform ${scrolled ? "scale-105" : "scale-100"
+          }`}
       >
         <a href={menuMappings.about.anchor} className="hover:underline">
           {menuMappings.about.label}

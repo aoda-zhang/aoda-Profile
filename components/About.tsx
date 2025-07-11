@@ -14,9 +14,9 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            My journey in software development began in university, when I built
-            my first website using basic HTML and CSS — an experience that
-            sparked a deep passion for coding and digital creativity.
+            My journey in software development began in university in 2017, when
+            I built my first website using basic HTML and CSS — an experience
+            that sparked a deep passion for coding and digital creativity.
           </p>
           <p>
             Over the years, I’ve developed strong expertise across modern

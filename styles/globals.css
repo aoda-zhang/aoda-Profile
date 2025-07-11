@@ -124,5 +124,5 @@
 }
 
 .menu_title {
-  @apply text-3xl text-secondary;
+  @apply text-3xl text-secondary my-40;
 }

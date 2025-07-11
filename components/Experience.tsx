@@ -1,41 +1,26 @@
+import React, { useState } from "react";
+import classNames from "classnames";
 import menuMappings from "@/constants/menuMappings";
-import { MoveUpRight } from "lucide-react";
-import Image from "next/image";
+import Link from "next/link";
 
 const experiences = [
   {
     company: "Manulife",
-    role: "Full‑stack Developer",
-    period: "2022 – Present",
-    desc: (
-      <ul className="space-y-2 list-disc pl-5">
-        <li>
-          As a member of GWAM ,Collaborated with PM, QA, and global development
-          teams to deliver high-quality features through Agile sprints.
-        </li>
-        <li>
-          Led the requirement analysis, design, and implementation of the
-          trading report module in the fund trading system.
-        </li>
-        <li>
-          Participated in the design and development of backend microservices
-          for the fund trading system, focusing on modularity and performance.
-        </li>
-        <li>
-          Contributed to the team’s CI/CD pipeline setup and maintenance using
-          GitHub Actions, supporting continuous integration and delivery
-          workflows.
-        </li>
-      </ul>
-    ),
-    url: "https://www.manulifeim.com/",
-    logo: "/assets/images/manulife.svg",
-    techs: [
+    role: "Full-stack Developer",
+    period: "Aug 2022 – Present",
+    link: "https://www.manulife.com",
+    description: [
+      "As a member of GWAM, collaborated with PM, QA, and global development teams to deliver high-quality features through Agile sprints.",
+      "Made significant contributions to system architecture and the development of key modules across multiple frontend and backend microservices.",
+      "Led the requirement analysis, design, and implementation of the trading report module in the fund trading system.",
+      "Participate in the refactoring of devops.",
+    ],
+    tech: [
       "TypeScript",
       "React",
       "Redux",
       "Tailwind CSS",
-      "Node.js",
+      "Express.js",
       "NestJS",
       "MongoDB",
     ],
@@ -43,97 +28,104 @@ const experiences = [
   {
     company: "Newegg",
     role: "Senior FrontEnd Developer",
-    period: "2021 – 2022",
-    desc: (
-      <ul className="space-y-2 list-disc pl-5">
-        <li>
-          As a member of MKPL, I led the selection and migration of the
-          front-end technology stack.
-        </li>
-        <li>
-          Lead the design and development of the team&lsquo;s component library
-          to ensure the reusability and consistency of the component library.
-        </li>
-        <li>
-          Push the team to formulate front-end technical specifications and best
-          practices.
-        </li>
-        <li>
-          Guide junior front-end developers to help them improve their skills
-          and solve technical problems.
-        </li>
-        <li>
-          Responsible for the design, development and maintenance of important
-          modules of the seller web and mobile terminal.
-        </li>
-      </ul>
-    ),
-    url: "https://partner.newegg.com/",
-    logo: "/assets/images/newegg.png",
-    techs: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "React Native",
-      "Scss",
-      "Vite",
+    period: "Aug 2021 – July 2022",
+    link: "https://www.newegg.com",
+    description: [
+      "As a member of MKPL, I led the selection and migration of the front-end technology stack.",
+      "Led the development of the team’s component library to ensure reusability and consistency.",
+      "Refactored legacy pages and improved overall code maintainability and performance.",
+      "Push the team to formulate front-end technical specifications and best practices.",
+      "Guide junior front-end developers to help them improve their skills and solve technical problems.",
+      "Responsible for the design, development and maintenance of important modules of the seller web and mobile terminal."
     ],
+    tech: ["React", "React-Native", "Redux", "Scss", "Vite"],
   },
   {
     company: "Hucais",
     role: "FrontEnd Developer",
-    period: "2017 – 2021",
-    desc: "Built MERN apps & CI/CD.",
-    url: "https://www.hucais.com",
-    logo: "/assets/images/hucais.png",
-    techs: ["JavaScript", "TypeScript", "React", "Vue.js", "Scss"],
+    period: "Sept 2017 – June 2021",
+    link: "",
+    description: [
+      "As a member of MKPL, I led the selection and migration of the front-end technology stack.",
+      "Led the development of the team’s component library to ensure reusability and consistency.",
+      "Refactored legacy pages and improved overall code maintainability and performance.",
+      "Push the team to formulate front-end technical specifications and best practices.",
+      "Guide junior front-end developers to help them improve their skills and solve technical problems.",
+      "Responsible for the design, development and maintenance of important modules of the seller web and mobile terminal."
+    ],
+    tech: ["React", "React-Native", "Redux", "Scss", "Vite"],
   },
 ];
 
-export function Experience() {
+const Experience = () => {
+  const [active, setActive] = useState(0);
+
   return (
-    <section id={menuMappings.experience.id} className="space-y-6 py-12">
-      <h3 className="menu_title text-secondary text-center mb-20">
+    <>
+      <h3 id={menuMappings.experience.id} className="menu_title text-secondary text-center">
         {menuMappings.experience.title}
       </h3>
-      <div className="relative border-l-2 border-secondary ml-4 pl-6 space-y-4">
-        {experiences.map((e, i) => (
-          <div key={i} className="space-y-1">
-            <h4 className="text-xl neon-text flex items-center gap-2">
-              <a
-                href={e.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <>
-                  {e.role} @ {e.company}
-                  {e.logo && (
-                    <Image
-                      src={e?.logo}
-                      alt={e.company}
-                      width={34}
-                      height={34}
-                      className="h-auto object-contain"
-                    />
-                  )}
-                  <MoveUpRight />
-                </>
-              </a>
-            </h4>
-            <span className="text-sm text-gray-400">{e?.period}</span>
-            <div className="text-text-secondary my-4">{e?.desc}</div>
-            {e?.techs?.map((tech, index) => (
+      <section className="flex flex-col md:flex-row gap-6 text-gray-200">
+        <div className="md:w-1/3 flex flex-col gap-3">
+          {experiences.map((exp, i) => (
+            <button
+              key={exp.company}
+              onClick={() => setActive(i)}
+              className={classNames(
+                "text-left p-4 border-l-4 rounded-md hover:bg-white/5 transition-all duration-200 cursor-pointer",
+                active === i
+                  ? "border-primary bg-white/5 text-primary"
+                  : "border-transparent text-text-secondary"
+              )}
+            >
+              <div className="font-semibold">
+                {exp.role}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">{exp.period}</div>
+            </button>
+          ))}
+        </div>
+
+        <div className="md:w-3/4 p-4 transition-border  rounded-xl bg-black/30 shadow-md">
+          <div className="flex items-center gap-2">
+            <Link className={classNames(["text-xl font-bold text-primary", `${experiences[active]?.link ? "cursor-pointer" : ""}`])} href={experiences[active]?.link} target="_blank">
+              {experiences[active]?.company}
+            </Link>
+            {
+              experiences[active]?.link && (
+                <a
+                  href={experiences[active].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-blue-300 hover:underline"
+                >
+                  ↗
+                </a>
+              )
+            }
+
+          </div>
+
+          <ul className="list-disc mt-4 pl-5 space-y-2 text-sm leading-relaxed">
+            {experiences[active].description.map((line, idx) => (
+              <li key={idx}>{line}</li>
+            ))}
+          </ul>
+
+          <div className="flex flex-wrap gap-2 mt-4">
+            {experiences[active].tech.map((tech, idx) => (
               <span
-                key={index}
-                className="inline-block text-gray-300 text-md mr-4 mb-2"
+                key={idx}
+                className="bg-neon-green/10 text-primary px-2 py-1 rounded-full text-xs font-mono border border-primary"
               >
                 {tech}
               </span>
             ))}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section >
+    </>
   );
-}
+};
+
+export default Experience;
