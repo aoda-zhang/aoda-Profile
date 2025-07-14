@@ -57,7 +57,7 @@ export default function Expertise() {
             custom={i}
             variants={cardVariants}
           >
-            <h3 className="text-neon-green text-lg font-bold mb-4 glow-text">
+            <h3 className="text-primary text-lg font-bold mb-4 glow-text">
               {exp.title}
             </h3>
             <p className="text-text-secondary text-sm mb-4">

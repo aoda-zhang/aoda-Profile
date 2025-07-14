@@ -7,7 +7,6 @@
   --color-text: #111827;
   --color-text-secondary: #9ca3af;
   --color-border: #cbd5e1;
-  --color-neon-green: #00ff00;
   --color-accent: #1f2937;
 
   /* === Brand Colors === */
@@ -120,7 +119,7 @@
 }
 
 .transition-border:hover {
-  @apply -translate-y-2 shadow-neon-green/60;
+  @apply -translate-y-2 shadow-primary/60;
 }
 
 .menu_title {

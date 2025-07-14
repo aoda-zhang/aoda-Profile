@@ -15,7 +15,7 @@ const menuMappings = {
         label: '03. Experience',
         anchor: '#experience',
         id: "experience",
-        title: '/ Work Experiences',
+        title: '/ Work Experience',
     },
     resume: {
         label: '',

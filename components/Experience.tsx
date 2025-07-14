@@ -10,16 +10,17 @@ const experiences = [
     period: "Aug 2022 – Present",
     link: "https://www.manulife.com",
     description: [
-      "As a member of GWAM, collaborated with PM, QA, and global development teams to deliver high-quality features through Agile sprints.",
-      "Made significant contributions to system architecture and the development of key modules across multiple frontend and backend microservices.",
-      "Led the requirement analysis, design, and implementation of the trading report module in the fund trading system.",
-      "Participate in the refactoring of devops.",
+      "Full-stack developer at GWAM, working with global teams to deliver fund trading features in an agile environment.",
+      "Led the design and implementation of the transaction reporting module.",
+      "Contributed to the architecture and core development of key microservices (subscription, redemption, conversion, RSP).",
+      "Guided junior front-end developers on component design and performance tuning.",
+      "Improved CI/CD efficiency by participating in DevOps pipeline refactoring.",
     ],
     tech: [
       "TypeScript",
       "React",
       "Redux",
-      "Tailwind CSS",
+      "Tailwind",
       "Express.js",
       "NestJS",
       "MongoDB",
@@ -31,14 +32,12 @@ const experiences = [
     period: "Aug 2021 – July 2022",
     link: "https://www.newegg.com",
     description: [
-      "As a member of MKPL, I led the selection and migration of the front-end technology stack.",
-      "Led the development of the team’s component library to ensure reusability and consistency.",
-      "Refactored legacy pages and improved overall code maintainability and performance.",
-      "Push the team to formulate front-end technical specifications and best practices.",
-      "Guide junior front-end developers to help them improve their skills and solve technical problems.",
-      "Responsible for the design, development and maintenance of important modules of the seller web and mobile terminal."
+      "Led front-end tech stack migration and established team-wide standards.",
+      "Built reusable component library and refactored legacy code for better performance.",
+      "Developed key modules for Newegg seller web and mobile portal.",
+      "Mentored junior developers and supported their technical growth.",
     ],
-    tech: ["React", "React-Native", "Redux", "Scss", "Vite"],
+    tech: ["Javascript", "Typescript", "React", "React-Native", "Redux", "Scss", "Vite"],
   },
   {
     company: "Hucais",
@@ -46,14 +45,10 @@ const experiences = [
     period: "Sept 2017 – June 2021",
     link: "",
     description: [
-      "As a member of MKPL, I led the selection and migration of the front-end technology stack.",
-      "Led the development of the team’s component library to ensure reusability and consistency.",
-      "Refactored legacy pages and improved overall code maintainability and performance.",
-      "Push the team to formulate front-end technical specifications and best practices.",
-      "Guide junior front-end developers to help them improve their skills and solve technical problems.",
-      "Responsible for the design, development and maintenance of important modules of the seller web and mobile terminal."
+      "Developed and maintained front-end pages for e-commerce platform and photo studio system using JavaScript, Vue, and React.",
+      "integrating APIs and developing reusable components under senior developer mentorship.",
     ],
-    tech: ["React", "React-Native", "Redux", "Scss", "Vite"],
+    tech: ["HTML5", "CSS3", "Typescript", "Vue", "React", "Redux", "Scss", "Webpack"],
   },
 ];
 
@@ -97,7 +92,7 @@ const Experience = () => {
                   href={experiences[active].link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-blue-300 hover:underline"
+                  className="text-3xl text-secondary mt-[-8]"
                 >
                   ↗
                 </a>
@@ -116,7 +111,7 @@ const Experience = () => {
             {experiences[active].tech.map((tech, idx) => (
               <span
                 key={idx}
-                className="bg-neon-green/10 text-primary px-2 py-1 rounded-full text-xs font-mono border border-primary"
+                className="bg-primary/10 text-primary border-primary px-2 py-1 rounded-full text-xs font-mono border"
               >
                 {tech}
               </span>

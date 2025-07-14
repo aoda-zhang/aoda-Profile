@@ -3,7 +3,9 @@ export const metadata = {
   description:
     "Full‑stack developer · Cybersecurity enthusiast · Open‑source contributor",
   keywords: [
+    "aoda",
     "Full‑stack",
+    "aoda‑zhang",
     "Frontend developer",
     "Developer",
     "React",
@@ -16,7 +18,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://aoda.vercel.app",
-    title: "Aoda – Hacker‑Style Portfolio",
+    title: "Aoda – dev",
     description: "Full‑stack developer & cyberpunk UI lover",
     images: [{ url: "/og-cover.png", width: 1200, height: 630 }],
   },
