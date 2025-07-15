@@ -14,25 +14,25 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            My journey in software development began in university in 2017, when
-            I built my first website using basic HTML and CSS — an experience
-            that sparked a deep passion for coding and digital creativity.
+            I’m a full-stack developer with 8+ years of experience building
+            modern web applications using the MERN stack (MongoDB, Express.js,
+            React, Node.js), along with TypeScript and cross-platform tools.
           </p>
           <p>
-            Over the years, I’ve developed strong expertise across modern
-            frontend, backend, and cross-platform technologies, including
-            JavaScript, TypeScript, React, and Node.js. I’ve worked in both
-            startups and large enterprises, gaining hands-on experience in agile
-            development, scalable architecture, and system-level thinking.
-            Today, I truly enjoy the end-to-end development process — from
-            backend APIs to frontend interfaces — as it gives me a more holistic
-            understanding of how great digital products are built and evolved.
+            My coding journey started in 2017 at university with a simple HTML &
+            CSS site — and I’ve been hooked ever since.
           </p>
           <p>
-            Currently, I work as a full-stack developer at a major international
-            financial institution from Canada, collaborating with global teams
-            to architect and build systems that support fund trading at scale.
+            Since then, I’ve worked across both startups and large enterprises,
+            focusing on scalable architecture, API design, and clean frontend
+            interfaces. I enjoy building systems from end to end and turning
+            ideas into high-quality digital products.
           </p>
+          <p>
+            Currently, I work at a global financial institution, helping teams
+            architect and deliver systems that support large-scale fund trading.
+          </p>
+          <p>Always learning. Always building.</p>
         </div>
         <div className="relative w-80 h-80 group cursor-pointer">
           <div className="animate-ring"></div>
