@@ -12,7 +12,7 @@ const experiences = [
     description: [
       "Full-stack developer at GWAM, working with global teams to deliver fund trading features in an agile environment.",
       "Led the design and implementation of the transaction reporting module.",
-      "Contributed to the architecture and core development of key microservices (subscription, redemption, conversion, RSP).",
+      "Contributed to the architecture and core development of key microservices (subscription, redemption, switch, RSP).",
       "Guided junior front-end developers on component design and performance tuning.",
       "Improved CI/CD efficiency by participating in DevOps pipeline refactoring.",
     ],
