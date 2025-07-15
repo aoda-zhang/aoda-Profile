@@ -29,8 +29,9 @@ const About = () => {
             ideas into high-quality digital products.
           </p>
           <p>
-            Currently, I work at a global financial institution, helping teams
-            architect and deliver systems that support large-scale fund trading.
+            Currently, I work at a huge international financial company from
+            Canada, helping teams architect and deliver systems that support
+            large-scale fund trading.
           </p>
           <p>Always learning. Always building.</p>
         </div>
