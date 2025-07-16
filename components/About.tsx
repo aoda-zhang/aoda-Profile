@@ -14,18 +14,6 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            I’m a{" "}
-            <span className="text-white">
-              full-stack developer with 8+ years of experience
-            </span>{" "}
-            building modern web applications using the MERN stack{" "}
-            <span className="text-white">
-              (MongoDB, Express.js, React, Node.js)
-            </span>
-            , along with <span className="text-white">TypeScript</span> and
-            cross-platform tools.
-          </p>
-          <p>
             My coding journey started in 2017 at university with a simple HTML &
             CSS site — and I’ve been hooked ever since.
           </p>
