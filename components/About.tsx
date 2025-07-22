@@ -15,13 +15,13 @@ const About = () => {
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
             My coding journey started in 2017 at university with a simple HTML &
-            CSS site — and I’ve been hooked ever since.
+            CSS site — and I’ve been passionate about it ever since.
           </p>
           <p>
             Since then, I’ve worked across both startups and large enterprises,
-            focusing on scalable architecture, API design, and clean frontend
-            interfaces. I enjoy building systems from end to end and turning
-            ideas into high-quality digital products.
+            focusing on scalable architecture, API design, and user-friendly
+            frontend interface. I enjoy building systems from end to end and
+            turning ideas into high-quality digital products.
           </p>
           <p>
             Currently, I work at a huge international financial company from
