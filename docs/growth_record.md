@@ -1,24 +1,15 @@
 # Growth Record
 
-## Tech side （ Roadmap.sh ）
+## German 之旅 schedule
 
-### HTML 
-### CSS 
-### JS 
-### TS
-### React
-### Frontend-performance
+- 项目持续推进
+- 简历撰写
+- 每周一篇技术文档
+- 英文听力精进
+- greatFrontend 前端面试复习
 
-### Backend
-### NodeJS
-### MongoDB
-### Devops
-### Docker
+## 公司摸鱼学习
 
-## Interview side （GreatFrontEnd）
-
-### Tech
-
-### System design
-
-### Behavior questions
+- 具体未解决的技术点
+- 英文常用表达学习
+- roadmap 知识点复习
