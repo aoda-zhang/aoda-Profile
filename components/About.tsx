@@ -14,21 +14,30 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            My coding journey started in 2017 at university with a simple HTML &
-            CSS site — and I’ve been passionate about it ever since.
+            I am a senior front-end developer with over 8+ years of experience,
+            focusing on building beautiful, responsive, user-friendly web
+            applications.
           </p>
           <p>
-            Since then, I’ve worked across both startups and large enterprises,
-            focusing on scalable architecture, API design, and user-friendly
-            frontend interface. I enjoy building systems from end to end and
-            turning ideas into high-quality digital products.
+            Having a background in working for large companies allows me to
+            focus not only on functionality but also on scalability and
+            maintainability when implementing UI. I am proficient in modern
+            technologies such as strong HTML, CSS, React, TypeScript, NodeJS, etc.
           </p>
           <p>
-            Currently, I work at a huge international financial company from
-            Canada, helping teams architect and deliver systems that support
-            large-scale fund trading.
+            In my current role, I led the reconstruction of the fund transaction
+            reporting system, improving the team's development efficiency by
+            40%, and was responsible for communicating with the design
+            department. I successfully integrated the front-end design token and
+            reduced the number of front-end style bugs by 60%. I enjoy building
+            systems from end to end and turning ideas into high-quality digital
+            products.
           </p>
-          <p>Always learning. Always building.</p>
+          <p>
+            I am keen to explore new trends in the front end, and I am also
+            happy to pass on my experience to more developers through blogs and
+            sharing activities.
+          </p>
         </div>
         <div className="relative w-80 h-80 group cursor-pointer">
           <div className="animate-ring"></div>
