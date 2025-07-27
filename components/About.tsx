@@ -26,7 +26,7 @@ const About = () => {
           </p>
           <p>
             In my current role, I led the reconstruction of the fund transaction
-            reporting system, improving the team's development efficiency by
+            reporting system, improving the team&lsquo;s development efficiency by
             40%, and was responsible for communicating with the design
             department. I successfully integrated the front-end design token and
             reduced the number of front-end style bugs by 60%. I enjoy building
