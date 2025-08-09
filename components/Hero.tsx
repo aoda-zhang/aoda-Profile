@@ -38,7 +38,7 @@ export default function Hero() {
         transition={{ delay: 0.3 }}
         className="text-gray-300 tracking-wider text-lg"
       >
-        Senior Front-end Engineer | React & Typescript & NodeJS
+        FullStack Developer | React & Typescript & NodeJS
       </motion.p>
 
       <motion.div
