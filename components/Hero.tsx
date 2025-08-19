@@ -47,9 +47,12 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        With 8+ years of experience, I’m passionate about turning ideas into
-        high-quality digital products using the MERN stack (MongoDB, Express.js,
-        React, Node.js), and I’m always exploring what’s next.
+        <motion.p>
+          With <strong>8+ years</strong> of experience, I’m passionate about
+          turning ideas into high-quality digital products using the{" "}
+          <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js), and
+          I’m always exploring what’s next.
+        </motion.p>
       </motion.div>
 
       <div className="absolute bottom-4">
