@@ -20,17 +20,11 @@ const menuMappings = {
     resume: {
         label: '',
     },
-    // projects: {
-    //     label: '04. Projects',
-    //     anchor: '#projects',
-    //     id: "projects",
-    //     title: '/ Side Projects',
-    // },
     projects: {
-        label: '',
-        anchor: '',
-        id: "",
-        title: '',
-    },
+        label: '04. Project',
+        anchor: '#project',
+        id: "project",
+        title: '/ Side Project',
+    }
 }
 export default menuMappings

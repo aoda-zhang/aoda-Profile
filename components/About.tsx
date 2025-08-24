@@ -14,9 +14,10 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            I am a senior front-end developer with over 8+ years of experience,
-            focusing on building beautiful, responsive, user-friendly web
-            applications.
+            I am a full-stack developer with 8+ years of experience,
+            specializing in building beautiful, responsive, and user-friendly
+            front-end applications, while also experienced in back-end
+            development.
           </p>
           <p>
             Having a background in working for large companies allows me to
@@ -37,14 +38,14 @@ const About = () => {
           <p>
             I love programming because I believe technology can make life better
             and bring hope. Through projects like{" "}
-            <a href="https://pawhaven-love.vercel.app/">
+            <a href="https://pawhaven-love.vercel.app">
               <strong>PawHaven</strong>
             </a>
             , I combine my full-stack skills with compassion — helping stray
             animals find safety and love.
           </p>
         </div>
-        <div className="relative w-80 h-80 group cursor-pointer">
+        <div className="relative w-100 h-100 group cursor-pointer">
           <div className="animate-ring"></div>
           <Image
             src="/assets/images/avatar.jpeg"

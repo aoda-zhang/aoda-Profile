@@ -41,11 +41,11 @@ const Header = () => {
         <a href={menuMappings.projects.anchor} className="hover:underline">
           {menuMappings.projects.label}
         </a>
-        {
+        {/* {
           <a href="#projects" className="px-6 hover:glow-border">
             {menuMappings.resume.label}
           </a>
-        }
+        } */}
       </nav>
     </header>
   );
