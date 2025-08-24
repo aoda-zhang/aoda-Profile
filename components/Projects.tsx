@@ -1,8 +1,6 @@
 import menuMappings from "@/constants/menuMappings";
 import PawHaven from "./PawHaven";
 
-const projects: Record<string, string>[] = [];
-
 export function Projects() {
   return (
     <section id={menuMappings?.projects?.id} className="space-y-6 py-12">

@@ -27,8 +27,6 @@ const PawHaven = ({
 
   const next = () => setActive((a) => (a + 1) % total);
 
-  const handleClick = () => next();
-
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
@@ -61,7 +59,7 @@ const PawHaven = ({
   useEffect(() => {
     const interval = setInterval(() => next(), 20000);
     return () => clearInterval(interval);
-  }, []);
+  }, [next]);
 
   return (
     <section className="relative min-h-screen w-full bg-black text-green-400 py-20 px-6">
