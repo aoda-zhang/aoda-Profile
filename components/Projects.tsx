@@ -20,10 +20,8 @@ export function Projects() {
         ]}
         liveUrl="https://pawhaven-love.vercel.app"
         screenshots={[
-          "/assets/images/pawhavenHome.png",
-          "/assets/images/pawhavenHome.png",
-          "/assets/images/pawhavenHome.png",
-          "/assets/images/pawhavenHome.png",
+          "/assets/images/pawHavenHero.png",
+          "/assets/images/pawHavenAuth.png",
         ]}
       />
     </section>
