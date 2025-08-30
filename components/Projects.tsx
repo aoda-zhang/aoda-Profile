@@ -22,6 +22,7 @@ export function Projects() {
         screenshots={[
           "/assets/images/pawHavenHero.png",
           "/assets/images/pawHavenAuth.png",
+          "/assets/images/pawHavenReportStray.png",
         ]}
       />
     </section>
