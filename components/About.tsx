@@ -45,13 +45,13 @@ const About = () => {
             animals find safety and love.
           </p>
         </div>
-        <div className="relative w-100 h-100 group cursor-pointer">
+        <div className="relative w-100 h-100 group">
           <div className="animate-ring"></div>
           <Image
             src="/assets/images/avatar.jpeg"
             alt="Aoda Avatar"
             fill
-            className="rounded-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            className="rounded-full object-cover opacity-100"
           />
         </div>
       </div>
