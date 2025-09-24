@@ -38,7 +38,7 @@ export default function Hero() {
         transition={{ delay: 0.3 }}
         className="text-gray-300 tracking-wider text-lg"
       >
-        FullStack Developer | Typescript & React & Node.js
+        FullStack Developer | Founder of PawHaven | Father 👶🏻
       </motion.p>
 
       <motion.div
@@ -48,11 +48,11 @@ export default function Hero() {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         <motion.p>
-          With <strong>8+ years</strong> of experience, I’m passionate about
-          turning ideas into high-quality digital products using the{" "}
-          <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js), and
-          I’m always exploring what’s next.
+          With over 8 years of experience, I’m passionate about all things
+          JavaScript and enjoy turning my ideas into digital products that
+          improve people’s lives.
         </motion.p>
+        <motion.p>Always learning, always exploring.</motion.p>
       </motion.div>
 
       <div className="absolute bottom-4">

@@ -7,7 +7,7 @@ export function Projects() {
       <h3 className="menu_title text-center">{menuMappings.projects?.title}</h3>
       <PawHaven
         title="PawHaven"
-        description="A platform to rescue and rehome stray animals. Connects rescuers, adopters, and volunteers."
+        description="A platform to rescue stray animals. Connects rescuers, adopters, and volunteers."
         tech={[
           "TypeScript",
           "React",
@@ -15,8 +15,7 @@ export function Projects() {
           "TailwindCSS",
           "Node.js",
           "MongoDB",
-          "Github Action",
-          "Azure K8s",
+          "K8s",
         ]}
         liveUrl="https://pawhaven-love.vercel.app"
         screenshots={[

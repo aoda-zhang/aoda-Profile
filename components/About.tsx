@@ -14,38 +14,27 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 max-w-5xl mx-auto">
         <div className="text-center md:text-left space-y-4 max-w-2xl">
           <p>
-            I am a full-stack developer with 8+ years of experience,
-            specializing in building beautiful, responsive, and user-friendly
-            front-end applications, while also experienced in back-end
+            I discovered software development through web development, and ever
+            since, I’ve been passionate about all things web. I love JavaScript
+            for its endless possibilities—frontend, backend, mobile, and desktop
             development.
           </p>
           <p>
-            Having a background in working for large companies allows me to
-            focus not only on functionality but also on scalability and
-            maintainability when implementing UI. I am proficient in modern
-            technologies such as strong HTML, CSS, React, TypeScript, NodeJS,
-            etc.
-          </p>
-          <p>
-            In my current role, I led the reconstruction of the fund transaction
-            reporting system, improving the team&lsquo;s development efficiency
-            by 40%, and was responsible for communicating with the design
-            department. I successfully integrated the front-end design token and
-            reduced the number of front-end style bugs by 60%. I enjoy building
-            systems from end to end and turning ideas into high-quality digital
-            products.
-          </p>
-          <p>
-            I love programming because I believe technology can make life better
-            and bring hope. Through projects like{" "}
+            I believe technology exists to serve humanity and make the world a
+            better place. Besides taking care of my newborn child, I dedicate
+            most of my time to developing{" "}
             <a href="https://pawhaven-love.vercel.app">
               <strong>PawHaven</strong>
             </a>
-            , I combine my full-stack skills with compassion — helping stray
-            animals find safety and love.
+            , an open-source platform for rescuing stray animals.
+          </p>
+          <p>
+            My wife and I are both animal lovers. Through this platform, we hope
+            to raise awareness of stray animal issues and help as many animals
+            as possible find a warm home—they are just like our children.
           </p>
         </div>
-        <div className="relative w-100 h-100 group">
+        <div className="relative w-100 h-84 group">
           <div className="animate-ring"></div>
           <Image
             src="/assets/images/avatar.jpeg"
