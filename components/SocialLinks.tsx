@@ -21,14 +21,14 @@ const socialLinks = [
     icon: <FaLinkedin />,
   },
   {
-    name: "Medium",
-    href: "https://medium.com/@aodazhang",
-    icon: <FaMedium />,
-  },
-  {
     name: "Dev.to",
     href: "https://dev.to/aoda-zhang",
     icon: <FaDev />,
+  },
+  {
+    name: "Medium",
+    href: "https://medium.com/@aodazhang",
+    icon: <FaMedium />,
   },
   {
     name: "Email",
