@@ -1,75 +1,42 @@
-import menuMappings from "@/constants/menuMappings";
-import { motion, Variants } from "framer-motion";
-
-const expertiseData = [
+const skills = [
   {
-    key: "frontend",
-    title: "Frontend Dev (React)",
-    description:
-      "Building responsive, user-friendly web things with modern tools and techniques",
-    skills: [
-      "Javascript",
-      "Typescript",
-      "React",
-      "Redux",
-      "Scss",
-      "Tailwind CSS",
-    ],
+    title: "Frontend",
+    description: "Building responsive, user-friendly web interfaces with modern tools",
+    items: ["JavaScript", "TypeScript", "React", "Redux", "Tailwind CSS"],
   },
   {
-    key: "backend",
-    title: "Backend Dev (Node.js)",
-    description:
-      "Designing scalable, maintainable APIs and microservices on Node.js.",
-    skills: ["Node.js", "ExpressJS", "NestJS", "MongoDB", "Prisma"],
+    title: "Backend",
+    description: "Designing scalable APIs and microservices",
+    items: ["Node.js", "Express", "NestJS", "MongoDB", "PostgreSQL"],
   },
   {
-    key: "cross",
-    title: "Cross-Platform Dev (React Native)",
-    description:
-      "Delivering native-quality mobile apps with a single React Native codebase.",
-    skills: ["React Native", "Expo", "TypeScript", "NativeWind"],
+    title: "Mobile",
+    description: "Cross-platform mobile apps with React Native",
+    items: ["React Native", "Expo", "TypeScript", "NativeWind"],
   },
-] as const;
+];
 
-const cardVariants: Variants = {
-  offscreen: { opacity: 0, y: 40 },
-  onscreen: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, type: "spring", stiffness: 80 },
-  }),
-};
-
-export default function Expertise() {
+export default function Skill() {
   return (
-    <section id={menuMappings.skill.id} className="text-center mt-40 px-4">
-      <h2 className="menu_title mb-20">{menuMappings.skill.title}</h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {expertiseData.map((exp, i) => (
-          <motion.div
-            key={exp.key}
-            className="transition-border"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={i}
-            variants={cardVariants}
-          >
-            <h3 className="text-primary text-lg font-bold mb-4 glow-text">
-              {exp.title}
-            </h3>
-            <p className="text-text-secondary text-sm mb-4">
-              {exp.description}
-            </p>
-
-            <ul className="text-left list-disc list-inside text-gray-300 space-y-1">
-              {exp.skills.map((skill) => (
-                <li key={skill}>{skill}</li>
+    <section id="skill">
+      <h2 className="section-title text-center">Skills</h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {skills.map((skill) => (
+          <div key={skill.title} className="card">
+            <h3 className="font-semibold text-zinc-900 mb-2">{skill.title}</h3>
+            <p className="text-sm text-zinc-500 mb-3">{skill.description}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {skill.items.map((item) => (
+                <span 
+                  key={item} 
+                  className="text-xs bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded"
+                >
+                  {item}
+                </span>
               ))}
-            </ul>
-          </motion.div>
+            </div>
+          </div>
         ))}
       </div>
     </section>

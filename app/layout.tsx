@@ -1,39 +1,18 @@
-export const metadata = {
-  title: "Aoda zhang Portfolio",
-  description:
-    "Full‑stack developer · Cybersecurity enthusiast · Open‑source contributor",
-  keywords: [
-    "aoda",
-    "Full‑stack",
-    "aoda‑zhang",
-    "Frontend developer",
-    "Developer",
-    "React",
-    "Next.js",
-    "Cyberpunk",
-    "Portfolio",
-  ],
-  authors: [{ name: "Aoda", url: "https://aoda.vercel.app" }],
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://aoda.vercel.app",
-    title: "Aoda – dev",
-    description: "Full‑stack developer & cyberpunk UI lover",
-    images: [{ url: "/og-cover.png", width: 1200, height: 630 }],
-  },
-};
-
-import SocialLinks from "@/components/SocialLinks";
-import "../styles/globals.css";
 import type { ReactNode } from "react";
+import "../styles/globals.css";
+
+export const metadata = {
+  title: "Aoda Zhang | Full-Stack Developer",
+  description: "Full-stack developer with 8+ years of experience. Building web and mobile applications with React, Node.js, and TypeScript.",
+  keywords: ["Aoda Zhang", "Full-stack Developer", "React", "TypeScript", "Node.js"],
+  authors: [{ name: "Aoda Zhang", url: "https://aoda.vercel.app" }],
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="bg-background text-[#E0E0E0] font-mono">
-      <body>
+    <html lang="en" className="bg-zinc-50 text-zinc-900">
+      <body className="font-sans antialiased">
         {children}
-        <SocialLinks />
       </body>
     </html>
   );
