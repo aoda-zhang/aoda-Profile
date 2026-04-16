@@ -1,64 +1,172 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt, FaChevronDown } from "react-icons/fa";
+import { SiNextdotjs, SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiOpenjdk, SiSpring } from "react-icons/si";
+
 const projects = [
   {
-    title: "PawHaven",
-    description: "An open-source platform for rescuing stray animals. Connects rescuers, adopters, and volunteers to help animals find warm homes.",
-    tech: ["TypeScript", "React", "Node.js", "MongoDB", "Kubernetes"],
-    link: "https://pawhaven-love.vercel.app",
-    github: "https://github.com/aoda-zhang/pawhaven",
-  },
-  {
+    id: "super-resume",
     title: "Super Resume",
-    description: "A modern resume builder with multiple templates, real-time preview, and PDF export. Supports multiple languages.",
-    tech: ["TypeScript", "React", "Redux", "Tailwind CSS"],
-    link: "",
+    description:
+      "A feature-rich resume builder with real-time preview, Markdown support, and beautiful templates. Export to PDF with one click.",
+    fullDescription:
+      "Built with React + TypeScript + Zustand for state management. Features include Markdown editor with live preview, 4 professionally designed templates, i18n support for Chinese/English/German, and high-quality PDF export via browser print. Deployed on GitHub Pages with automated CI/CD via GitHub Actions.",
+    tech: ["React", "TypeScript", "Zustand", "Tailwind CSS", "Markdown"],
     github: "https://github.com/aoda-zhang/super-resume",
+    demo: "https://aoda-zhang.github.io/super-resume/",
+    icons: [SiReact, SiNodedotjs, SiTailwindcss],
+    color: "#0ea5e9",
+    highlight: true,
   },
   {
-    title: "OpenClaw",
-    description: "AI-powered personal assistant framework with extensible skills system. Supports multiple messaging platforms.",
-    tech: ["TypeScript", "Node.js", "Claude API", "MCP"],
-    link: "",
-    github: "",
+    id: "pawhaven",
+    title: "PawHaven",
+    description:
+      "Open-source animal rescue platform with AI breed recognition, donation system, and community features.",
+    fullDescription:
+      "Developed using Next.js 15 and Tailwind v4. Integrated AI APIs for automatic breed identification from uploaded photos. Built a complete donation flow with payment gateway integration. Features include adoption matching, lost & found listings, and a community forum. 500+ users in the first month post-launch.",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI API", "Framer Motion"],
+    github: "https://github.com/aoda-zhang/pawhaven",
+    demo: "https://pawhaven-love.vercel.app",
+    icons: [SiNextdotjs, SiMongodb, SiTailwindcss],
+    color: "#f59e0b",
+    highlight: true,
+  },
+  {
+    id: "banking-app",
+    title: "Digital Banking App",
+    description:
+      "Enterprise-grade banking SaaS with real-time data visualization, multi-currency support, and automated compliance reporting.",
+    fullDescription:
+      "Full-stack fintech application serving enterprise clients. Implemented WebSocket-based real-time transaction monitoring. Optimized data processing algorithms reducing latency by 70%. Built comprehensive audit trails and automated regulatory reporting. Handles high-volume concurrent transactions with fault-tolerant architecture.",
+    tech: ["React", "Node.js", "MongoDB", "WebSocket", "TypeScript"],
+    github: "#",
+    demo: "#",
+    icons: [SiReact, SiNodedotjs, SiMongodb],
+    color: "#10b981",
+    highlight: false,
+  },
+  {
+    id: "ecommerce",
+    title: "B2B E-Commerce Platform",
+    description:
+      "Multi-vendor marketplace with inventory management, payment integration, and analytics dashboard. $500K+ annual GMV.",
+    fullDescription:
+      "End-to-end e-commerce solution with vendor dashboard, order management, and automated invoicing. Implemented secure payment processing with Stripe integration. Built real-time inventory tracking with low-stock alerts. Analytics dashboard provides actionable insights for vendors.",
+    tech: ["React", "Spring Boot", "MySQL", "Java", "REST API"],
+    github: "#",
+    demo: "#",
+    icons: [SiReact, SiOpenjdk, SiSpring],
+    color: "#8b5cf6",
+    highlight: false,
   },
 ];
 
 export default function Projects() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
   return (
-    <section id="project" className="pb-12">
-      <h2 className="section-title text-center">Projects</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((project) => (
-          <div key={project.title} className="card group">
-            <div className="flex items-start justify-between mb-2">
-              <h3 className="font-semibold text-zinc-900">{project.title}</h3>
-              <div className="flex gap-2 text-zinc-400">
-                {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-600">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                  </a>
-                )}
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-zinc-600">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                )}
+    <section id="project">
+      <h2 className="section-title text-center">Featured Projects</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {projects.map((project, idx) => {
+          const isOpen = expanded === project.id;
+          return (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: idx * 0.08, duration: 0.4 }}
+              className={`card flex flex-col group ${
+                project.highlight ? "border-[var(--color-primary-light)]" : ""
+              }`}
+            >
+              {/* Project header */}
+              <div className="p-5 flex-1 flex flex-col">
+                {/* Color bar */}
+                <div
+                  className="h-1 w-12 rounded-full mb-4 transition-all group-hover:w-20"
+                  style={{ backgroundColor: project.color }}
+                />
+
+                <h3 className="text-base font-semibold text-zinc-900 mb-1">{project.title}</h3>
+                <p className="text-sm text-zinc-500 leading-relaxed flex-1">{project.description}</p>
+
+                {/* Tech icons */}
+                <div className="flex items-center gap-2 mt-4 mb-4">
+                  {project.icons.map((Icon, i) => (
+                    <div
+                      key={i}
+                      className="w-7 h-7 rounded-lg bg-zinc-100 flex items-center justify-center text-zinc-400"
+                    >
+                      <Icon className="w-3.5 h-3.5" />
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {project.tech.map((t) => (
+                    <span key={t} className="skill-tag">{t}</span>
+                  ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex items-center gap-3">
+                  {project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline text-xs py-1.5 px-3 flex items-center gap-1.5"
+                    >
+                      <FaGithub className="w-3.5 h-3.5" />
+                      Code
+                    </a>
+                  )}
+                  {project.demo !== "#" && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary text-xs py-1.5 px-3 flex items-center gap-1.5"
+                    >
+                      <FaExternalLinkAlt className="w-3 h-3" />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.demo !== "#" && (
+                    <button
+                      onClick={() => setExpanded(isOpen ? null : project.id)}
+                      className="ml-auto text-xs text-zinc-400 hover:text-zinc-600 transition-colors flex items-center gap-1"
+                    >
+                      {isOpen ? "Less" : "More"}
+                      <motion.span animate={{ rotate: isOpen ? 180 : 0 }}>
+                        <FaChevronDown className="w-3 h-3" />
+                      </motion.span>
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-            <p className="text-sm text-zinc-500 mb-3">{project.description}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {project.tech.map((t) => (
-                <span key={t} className="text-xs bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+
+              {/* Expanded description */}
+              {isOpen && project.demo !== "#" && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  transition={{ duration: 0.3 }}
+                  className="px-5 pb-5 border-t border-zinc-100 pt-4"
+                >
+                  <p className="text-xs text-zinc-500 leading-relaxed">{project.fullDescription}</p>
+                </motion.div>
+              )}
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

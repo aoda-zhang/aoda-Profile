@@ -1,111 +1,113 @@
 "use client";
 
 import { useState } from "react";
-import classNames from "classnames";
+import { motion } from "framer-motion";
+import { FaChevronDown, FaCalendarAlt } from "react-icons/fa";
 
 const experiences = [
   {
-    company: "Manulife",
-    role: "Full-Stack Developer",
-    period: "Aug 2022 – Present",
-    link: "https://www.manulife.com",
-    items: [
-      "Led reconstruction of fund trading reporting system, improving development efficiency by 40%",
-      "Completed design token integration across multiple frontend projects, reducing style bugs by 60%",
-      "Participated in frontend/backend architecture design and core development of fund trading microservices",
-      "Helped reconstruct DevOps pipeline using GitHub Actions",
-    ],
-    tech: ["TypeScript", "React", "Redux", "Tailwind", "NestJS", "MongoDB"],
+    id: "sdfx",
+    title: "Full-Stack Developer",
+    company: "SDFX",
+    period: "2022.06 — Present",
+    description:
+      "Delivered fintech SaaS platforms with real-time data visualization, reducing data processing time by 70% through algorithm optimization. Built e-commerce solutions generating $500K+ annual GMV.",
+    tech: ["React", "Node.js", "MongoDB", "TypeScript", "WebSocket"],
+    color: "var(--color-primary)",
   },
   {
-    company: "Newegg",
-    role: "Senior Frontend Developer",
-    period: "Aug 2021 – July 2022",
-    link: "https://www.newegg.com",
-    items: [
-      "Led frontend stack migration from AngularJS to React/TypeScript, increasing development speed by 30%",
-      "Built internal reusable UI component library used in 10+ projects",
-      "Delivered core modules for Newegg Global Seller Portal, impacting 20,000+ suppliers",
-      "Mentored 4 junior engineers and facilitated 2 promotions",
-    ],
-    tech: ["JavaScript", "TypeScript", "React", "Redux", "SCSS", "Vite"],
+    id: "yile",
+    title: "Full-Stack Developer",
+    company: "Yile Tech",
+    period: "2020.07 — 2022.05",
+    description:
+      "Led development of logistics and e-commerce systems with 100+ concurrent user support. Implemented payment integration and automated workflows, saving 20+ hours per week.",
+    tech: ["React", "Node.js", "MySQL", "JavaScript", "Vue.js"],
+    color: "var(--color-accent)",
   },
   {
-    company: "Hucais",
-    role: "Frontend Developer",
-    period: "Sept 2017 – June 2021",
-    link: "",
-    items: [
-      "Developed and maintained frontend pages for e-commerce platform using Vue and React",
-      "Integrated APIs and developed reusable components under senior developer mentorship",
-    ],
-    tech: ["Vue", "React", "Redux", "SCSS", "Webpack"],
+    id: "pawhaven",
+    title: "Founder & Developer",
+    company: "PawHaven (Open Source)",
+    period: "2024 — Present",
+    description:
+      "Open-source platform for animal rescue. Developed AI-powered breed recognition and built a community of animal lovers. 500+ users in the first month.",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI/ML API", "Framer Motion"],
+    color: "#f59e0b",
+    highlight: true,
   },
 ];
 
 export default function Experience() {
-  const [active, setActive] = useState(0);
+  const [expanded, setExpanded] = useState<string | null>("sdfx");
 
   return (
     <section id="experience">
       <h2 className="section-title text-center">Experience</h2>
-      
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Tabs */}
-        <div className="md:w-1/3 flex md:flex-col gap-1 overflow-x-auto md:overflow-visible">
-          {experiences.map((exp, i) => (
-            <button
-              key={exp.company}
-              onClick={() => setActive(i)}
-              className={classNames(
-                "text-left px-4 py-3 rounded-lg border transition whitespace-nowrap md:whitespace-normal",
-                active === i
-                  ? "bg-white border-zinc-300 text-zinc-900"
-                  : "bg-transparent border-transparent text-zinc-500 hover:text-zinc-700"
-              )}
+
+      <div className="space-y-4 max-w-2xl mx-auto">
+        {experiences.map((exp, idx) => {
+          const isOpen = expanded === exp.id;
+          return (
+            <motion.div
+              key={exp.id}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, duration: 0.4 }}
+              className={`card overflow-hidden transition-colors ${
+                exp.highlight ? "border-[var(--color-accent)] bg-gradient-to-br from-amber-50 to-white" : ""
+              }`}
             >
-              <div className="font-medium text-sm">{exp.company}</div>
-              <div className="text-xs text-zinc-400 mt-0.5">{exp.period}</div>
-            </button>
-          ))}
-        </div>
-
-        {/* Content */}
-        <div className="md:flex-1 card">
-          <div className="flex items-center gap-2 mb-4">
-            {experiences[active].link ? (
-              <a
-                href={experiences[active].link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-zinc-900 hover:underline"
+              {/* Clickable header */}
+              <button
+                onClick={() => setExpanded(isOpen ? null : exp.id)}
+                className="w-full text-left p-5 flex items-start justify-between gap-4"
               >
-                {experiences[active].company}
-              </a>
-            ) : (
-              <span className="font-bold text-zinc-900">{experiences[active].company}</span>
-            )}
-            <span className="text-zinc-300">·</span>
-            <span className="text-zinc-500 text-sm">{experiences[active].role}</span>
-          </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="text-base font-semibold text-zinc-900">{exp.title}</h3>
+                    {exp.highlight && (
+                      <span className="badge badge-accent text-xs">
+                        <span className="badge-dot" />
+                        Open Source
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-[var(--color-primary)] font-medium mt-0.5">{exp.company}</p>
+                  <p className="text-xs text-zinc-400 mt-1 flex items-center gap-1">
+                    <FaCalendarAlt className="w-3 h-3" />
+                    {exp.period}
+                  </p>
+                </div>
+                <motion.div
+                  animate={{ rotate: isOpen ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-zinc-300 mt-1 flex-shrink-0"
+                >
+                  <FaChevronDown className="w-4 h-4" />
+                </motion.div>
+              </button>
 
-          <ul className="list-disc pl-5 space-y-2 text-sm text-zinc-600 leading-relaxed mb-4">
-            {experiences[active].items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-
-          <div className="flex flex-wrap gap-1.5">
-            {experiences[active].tech.map((tech) => (
-              <span
-                key={tech}
-                className="text-xs bg-zinc-100 text-zinc-600 px-2 py-0.5 rounded"
+              {/* Expandable content */}
+              <motion.div
+                initial={false}
+                animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
               >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
+                <div className="px-5 pb-5 border-t border-zinc-100 pt-4 space-y-3">
+                  <p className="text-sm text-zinc-600 leading-relaxed">{exp.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {exp.tech.map((t) => (
+                      <span key={t} className="skill-tag">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
