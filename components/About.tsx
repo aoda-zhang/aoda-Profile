@@ -61,7 +61,7 @@ export default function About() {
             I believe technology exists to serve humanity. Besides taking care of my newborn child,
             I dedicate most of my time to{" "}
             <a
-              href="https://pawhaven-love.vercel.app"
+              href="https://pawhaven.work"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--color-primary)] font-semibold hover:underline"

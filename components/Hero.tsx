@@ -60,7 +60,7 @@ export default function Hero() {
           <span className="text-[var(--color-primary)] font-medium">make a difference</span>.
           Founder of{" "}
           <a
-            href="https://pawhaven-love.vercel.app"
+            href="https://pawhaven.work"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--color-accent)] font-semibold hover:underline"
