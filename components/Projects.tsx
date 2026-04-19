@@ -3,7 +3,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaChevronDown } from "react-icons/fa";
-import { SiNextdotjs, SiReact, SiNodedotjs, SiMongodb, SiTailwindcss, SiOpenjdk, SiSpring } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiOpenjdk,
+  SiSpring,
+} from "react-icons/si";
 
 const projects = [
   {
@@ -28,39 +36,11 @@ const projects = [
     fullDescription:
       "Developed using Next.js 15 and Tailwind v4. Integrated AI APIs for automatic breed identification from uploaded photos. Built a complete donation flow with payment gateway integration. Features include adoption matching, lost & found listings, and a community forum. 500+ users in the first month post-launch.",
     tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI API", "Framer Motion"],
-    github: "https://github.com/aoda-zhang/pawhaven",
-    demo: "https://pawhaven-love.vercel.app",
+    github: "https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS",
+    demo: "https://pawhaven.work",
     icons: [SiNextdotjs, SiMongodb, SiTailwindcss],
     color: "#f59e0b",
     highlight: true,
-  },
-  {
-    id: "banking-app",
-    title: "Digital Banking App",
-    description:
-      "Enterprise-grade banking SaaS with real-time data visualization, multi-currency support, and automated compliance reporting.",
-    fullDescription:
-      "Full-stack fintech application serving enterprise clients. Implemented WebSocket-based real-time transaction monitoring. Optimized data processing algorithms reducing latency by 70%. Built comprehensive audit trails and automated regulatory reporting. Handles high-volume concurrent transactions with fault-tolerant architecture.",
-    tech: ["React", "Node.js", "MongoDB", "WebSocket", "TypeScript"],
-    github: "#",
-    demo: "#",
-    icons: [SiReact, SiNodedotjs, SiMongodb],
-    color: "#10b981",
-    highlight: false,
-  },
-  {
-    id: "ecommerce",
-    title: "B2B E-Commerce Platform",
-    description:
-      "Multi-vendor marketplace with inventory management, payment integration, and analytics dashboard. $500K+ annual GMV.",
-    fullDescription:
-      "End-to-end e-commerce solution with vendor dashboard, order management, and automated invoicing. Implemented secure payment processing with Stripe integration. Built real-time inventory tracking with low-stock alerts. Analytics dashboard provides actionable insights for vendors.",
-    tech: ["React", "Spring Boot", "MySQL", "Java", "REST API"],
-    github: "#",
-    demo: "#",
-    icons: [SiReact, SiOpenjdk, SiSpring],
-    color: "#8b5cf6",
-    highlight: false,
   },
 ];
 
@@ -93,8 +73,12 @@ export default function Projects() {
                   style={{ backgroundColor: project.color }}
                 />
 
-                <h3 className="text-base font-semibold text-zinc-900 mb-1">{project.title}</h3>
-                <p className="text-sm text-zinc-500 leading-relaxed flex-1">{project.description}</p>
+                <h3 className="text-base font-semibold text-zinc-900 mb-1">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-zinc-500 leading-relaxed flex-1">
+                  {project.description}
+                </p>
 
                 {/* Tech icons */}
                 <div className="flex items-center gap-2 mt-4 mb-4">
@@ -111,7 +95,9 @@ export default function Projects() {
                 {/* Tech tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tech.map((t) => (
-                    <span key={t} className="skill-tag">{t}</span>
+                    <span key={t} className="skill-tag">
+                      {t}
+                    </span>
                   ))}
                 </div>
 
@@ -161,7 +147,9 @@ export default function Projects() {
                   transition={{ duration: 0.3 }}
                   className="px-5 pb-5 border-t border-zinc-100 pt-4"
                 >
-                  <p className="text-xs text-zinc-500 leading-relaxed">{project.fullDescription}</p>
+                  <p className="text-xs text-zinc-500 leading-relaxed">
+                    {project.fullDescription}
+                  </p>
                 </motion.div>
               )}
             </motion.div>
