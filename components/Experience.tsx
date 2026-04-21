@@ -6,35 +6,34 @@ import { FaChevronDown, FaCalendarAlt } from "react-icons/fa";
 
 const experiences = [
   {
-    id: "sdfx",
-    title: "Full-Stack Developer",
-    company: "SDFX",
-    period: "2022.06 — Present",
+    id: "manulife",
+    title: "Full-stack Software Engineer",
+    company: "Manulife (Leading global financial services company)",
+    period: "08/2022 — Present",
     description:
-      "Delivered fintech SaaS platforms with real-time data visualization, reducing data processing time by 70% through algorithm optimization. Built e-commerce solutions generating $500K+ annual GMV.",
-    tech: ["React", "Node.js", "MongoDB", "TypeScript", "WebSocket"],
+      "Led reconstruction of fund trading reporting system, improving development efficiency by 40%. Completed design token integration across multiple frontend projects, reducing style bugs by 60%. Participated in frontend/backend architecture design and core development of fund trading microservices. Helped reconstuct DevOps pipeline using GitHub Actions.",
+    tech: ["TypeScript", "React", "Express", "Nest.js", "MongoDB"],
     color: "var(--color-primary)",
   },
   {
-    id: "yile",
-    title: "Full-Stack Developer",
-    company: "Yile Tech",
-    period: "2020.07 — 2022.05",
+    id: "newegg",
+    title: "Senior Frontend Software Engineer",
+    company: "Newegg (Global e-commerce platform for electronics)",
+    period: "08/2021 — 07/2022",
     description:
-      "Led development of logistics and e-commerce systems with 100+ concurrent user support. Implemented payment integration and automated workflows, saving 20+ hours per week.",
-    tech: ["React", "Node.js", "MySQL", "JavaScript", "Vue.js"],
+      "Led frontend stack migration from AngularJS to React/TypeScript, increasing development speed by 30%. Built internal reusable UI component library used in 10+ projects. Delivered core modules for Newegg Global Seller Portal, impacting 20,000+ suppliers. Mentored 4 junior engineers and facilitated 2 promotions.",
+    tech: ["JavaScript", "TypeScript", "React", "React Native", "Redux"],
     color: "var(--color-accent)",
   },
   {
-    id: "pawhaven",
-    title: "Founder & Developer",
-    company: "PawHaven (Open Source)",
-    period: "2024 — Present",
+    id: "hucai",
+    title: "Frontend Software Engineer",
+    company: "Hucai (Digital printing and customized publishing company)",
+    period: "09/2017 — 06/2021",
     description:
-      "Open-source platform for animal rescue. Developed AI-powered breed recognition and built a community of animal lovers. 500+ users in the first month.",
-    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI/ML API", "Framer Motion"],
-    color: "#f59e0b",
-    highlight: true,
+      "Developed and maintained frontend pages for e-commerce platform using Vue and React. Integrated APIs and developed reusable components under senior developer mentorship.",
+    tech: ["JavaScript", "Vue", "React", "Redux", "Webpack"],
+    color: "#64748b",
   },
 ];
 
@@ -55,9 +54,7 @@ export default function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.4 }}
-              className={`card overflow-hidden transition-colors ${
-                exp.highlight ? "border-[var(--color-accent)] bg-gradient-to-br from-amber-50 to-white" : ""
-              }`}
+              className={`card overflow-hidden transition-colors`}
             >
               {/* Clickable header */}
               <button
@@ -65,15 +62,7 @@ export default function Experience() {
                 className="w-full text-left p-5 flex items-start justify-between gap-4"
               >
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="text-base font-semibold text-zinc-900">{exp.title}</h3>
-                    {exp.highlight && (
-                      <span className="badge badge-accent text-xs">
-                        <span className="badge-dot" />
-                        Open Source
-                      </span>
-                    )}
-                  </div>
+                  <h3 className="text-base font-semibold text-zinc-900">{exp.title}</h3>
                   <p className="text-sm text-[var(--color-primary)] font-medium mt-0.5">{exp.company}</p>
                   <p className="text-xs text-zinc-400 mt-1 flex items-center gap-1">
                     <FaCalendarAlt className="w-3 h-3" />
