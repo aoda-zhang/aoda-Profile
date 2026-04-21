@@ -4,17 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-const highlights = [
-  { icon: "💼", label: "8+ years full-stack experience" },
-  { icon: "🏠", label: "Based in China" },
-  { icon: "🐾", label: "Animal rescue advocate" },
-  { icon: "🌐", label: "Open source enthusiast" },
-];
-
 const socials = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
-  { name: "Email", href: "mailto:aodazhang666@email.com", icon: FaEnvelope },
+  { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
 ];
 
 export default function About() {
@@ -69,19 +62,6 @@ export default function About() {
               PawHaven
             </a>, an open-source platform for rescuing stray animals.
           </p>
-
-          {/* Highlight pills */}
-          <div className="flex flex-wrap gap-2 justify-center md:justify-start pt-1">
-            {highlights.map((h) => (
-              <span
-                key={h.label}
-                className="inline-flex items-center gap-1.5 text-xs text-zinc-500 bg-zinc-50 border border-zinc-100 rounded-full px-3 py-1.5"
-              >
-                <span>{h.icon}</span>
-                {h.label}
-              </span>
-            ))}
-          </div>
 
           {/* Social links */}
           <div className="flex items-center gap-3 pt-2 justify-center md:justify-start">

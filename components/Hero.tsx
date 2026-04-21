@@ -99,7 +99,7 @@ export default function Hero() {
           className="flex flex-wrap items-center gap-4 pt-4"
         >
           <a
-            href="mailto:aodazhang666@email.com"
+            href="mailto:aoda.zhang.work@email.com"
             className="btn btn-primary"
           >
             <FaEnvelope className="w-4 h-4" />

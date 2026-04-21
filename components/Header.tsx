@@ -16,7 +16,7 @@ const navItems = Object.values(menuMappings);
 const socials = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
-  { name: "Email", href: "mailto:aodazhang666@email.com", icon: FaEnvelope },
+  { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
 ];
 
 export default function Header() {
