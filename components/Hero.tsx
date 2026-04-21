@@ -13,12 +13,6 @@ const contacts = [
   { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
 ];
 
-const stats = [
-  { label: "Years Experience", value: "9+" },
-  { label: "Projects Delivered", value: "30+" },
-  { label: "Team Members Mentored", value: "10+" },
-];
-
 const containerVariants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12 } },
@@ -32,153 +26,135 @@ const itemVariants = {
 export default function Hero() {
   return (
     <section className="min-h-[85vh] flex flex-col justify-center py-16 md:py-24">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
         {/* Left: text content */}
         <motion.div
-          className="flex-1 space-y-8"
+          className="flex-1 space-y-7"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-        {/* Eyebrow badge */}
-        <motion.div variants={itemVariants} className="flex items-center gap-3">
-          <span className="badge badge-accent">
-            <span className="badge-dot" />
-            Open to opportunities
-          </span>
-        </motion.div>
+          {/* Badge */}
+          <motion.div variants={itemVariants} className="flex items-center gap-3">
+            <span className="badge badge-accent">
+              <span className="badge-dot" />
+              Open to opportunities
+            </span>
+          </motion.div>
 
-        {/* Name with gradient */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight"
-        >
-          <span className="text-zinc-900">Hi, I&apos;m </span>
-          <span className="gradient-text-animated">Aoda Zhang</span>
-        </motion.h1>
-
-        {/* Tagline */}
-        <motion.p
-          variants={itemVariants}
-          className="text-xl md:text-2xl text-zinc-600 font-light max-w-2xl"
-        >
-          Full-Stack Developer building products that{" "}
-          <span className="text-[var(--color-primary)] font-medium">
-            make a difference
-          </span>
-          . Founder of{" "}
-          <a
-            href="https://pawhaven.work"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--color-accent)] font-semibold hover:underline"
+          {/* Name */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
           >
-            PawHaven
-          </a>
-          .
-        </motion.p>
+            <span className="text-zinc-900">Hi, I&apos;m </span>
+            <span className="gradient-text-animated">Aoda Zhang</span>
+          </motion.h1>
 
-        {/* Description */}
-        <motion.p
-          variants={itemVariants}
-          className="text-zinc-500 max-w-xl leading-relaxed text-base md:text-lg"
-        >
-          I craft web and mobile applications with React, Node.js, and
-          TypeScript. Passionate about JavaScript ecosystem, open source, and
-          using technology to help others.
-        </motion.p>
-
-        {/* Stats row */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-wrap gap-8 md:gap-12 pt-2"
-        >
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col">
-              <span className="stat-number">{stat.value}</span>
-              <span className="text-xs text-zinc-400 uppercase tracking-wider mt-1">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </motion.div>
-
-        {/* Contact row with CTA */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-wrap items-center gap-4 pt-4"
-        >
-          <a
-            href="mailto:aoda.zhang.work@email.com"
-            className="btn btn-primary"
+          {/* Tagline */}
+          <motion.p
+            variants={itemVariants}
+            className="text-xl md:text-2xl text-zinc-600 font-light max-w-2xl"
           >
-            <FaEnvelope className="w-4 h-4" />
-            Get in Touch
-          </a>
-          <a
-            href="https://github.com/aoda-zhang"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            <FaGithub className="w-4 h-4" />
-            View GitHub
-          </a>
-          <a
-            href="/aoda-zhang.pdf"
-            download="Aoda-Zhang-Full-Stack-Developer.pdf"
-            className="btn btn-outline"
-          >
-            <FaDownload className="w-4 h-4" />
-            Download CV
-          </a>
-        </motion.div>
-
-        {/* Social icons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex items-center gap-4 pt-2"
-        >
-          {contacts.map((contact) => (
+            Full-Stack Developer building products that{" "}
+            <span className="text-[var(--color-primary)] font-medium">
+              make a difference
+            </span>
+            . Founder of{" "}
             <a
-              key={contact.name}
-              href={contact.href}
-              target={contact.name === "Email" ? "_self" : "_blank"}
+              href="https://pawhaven.work"
+              target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[var(--color-primary)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-primary-muted)] transition-all"
-              aria-label={contact.name}
+              className="text-[var(--color-accent)] font-semibold hover:underline"
             >
-              <contact.icon className="w-4 h-4" />
+              PawHaven
             </a>
-          ))}
-        </motion.div>
-      </motion.div>
+            .
+          </motion.p>
 
-      {/* Right: avatar */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.6, ease: easeOut }}
-        className="flex-shrink-0"
-      >
-        <div className="relative">
-          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
-            <img
-              src="/assets/images/avatar.jpeg"
-              alt="Aoda Zhang"
-              className="w-full h-full object-cover"
-            />
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-zinc-500 max-w-xl leading-relaxed text-base md:text-lg"
+          >
+            I craft web and mobile applications with React, Node.js, and
+            TypeScript. Passionate about JavaScript ecosystem, open source, and
+            using technology to help others.
+          </motion.p>
+
+          {/* CTA row */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="mailto:aoda.zhang.work@email.com"
+              className="btn btn-primary"
+            >
+              <FaEnvelope className="w-4 h-4" />
+              Get in Touch
+            </a>
+            <a
+              href="/aoda-zhang.pdf"
+              download="Aoda-Zhang-Full-Stack-Developer.pdf"
+              className="btn btn-outline"
+            >
+              <FaDownload className="w-4 h-4" />
+              Download CV
+            </a>
+            <a
+              href="https://github.com/aoda-zhang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              <FaGithub className="w-4 h-4" />
+              GitHub
+            </a>
+          </motion.div>
+
+          {/* Social icons */}
+          <motion.div variants={itemVariants} className="flex items-center gap-4">
+            {contacts.map((contact) => (
+              <a
+                key={contact.name}
+                href={contact.href}
+                target={contact.name === "Email" ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[var(--color-primary)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-primary-muted)] transition-all"
+                aria-label={contact.name}
+              >
+                <contact.icon className="w-4 h-4" />
+              </a>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Right: avatar */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: easeOut }}
+          className="flex-shrink-0"
+        >
+          <div className="relative">
+            <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <img
+                src="/assets/images/avatar.jpeg"
+                alt="Aoda Zhang"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute inset-0 rounded-full border-2 border-[var(--color-accent)] -z-10 translate-x-2 translate-y-2" />
           </div>
-          <div className="absolute inset-0 rounded-full border-2 border-[var(--color-accent)] -z-10 translate-x-2 translate-y-2" />
-        </div>
-      </motion.div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-zinc-300"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
