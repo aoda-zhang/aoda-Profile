@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
 const socials = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
   { name: "Linkedin", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
-  { name: "Email", href: "mailto:aodazhang666@email.com", icon: FaEnvelope },
+  { name: "Email", href: "mailto:aoda.zhang.work@gmail.com", icon: FaEnvelope },
 ];
 
 export default function Footer() {

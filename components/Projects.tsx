@@ -9,8 +9,6 @@ import {
   SiNodedotjs,
   SiMongodb,
   SiTailwindcss,
-  SiOpenjdk,
-  SiSpring,
 } from "react-icons/si";
 
 const projects = [
