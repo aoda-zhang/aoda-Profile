@@ -4,10 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaChevronDown } from "react-icons/fa";
 import {
-  SiNextdotjs,
   SiReact,
   SiNodedotjs,
-  SiMongodb,
   SiTailwindcss,
 } from "react-icons/si";
 
@@ -16,13 +14,13 @@ const projects = [
     id: "pawhaven",
     title: "PawHaven",
     description:
-      "Open-source platform that helps volunteers, shelters, and adopters report, track, and share stray animal rescue cases",
+      "Enterprise-level open-source platform for stray animal rescue — report, track, and share cases from sighting to adoption",
     fullDescription:
-      "Developed using Next.js 15 and Tailwind v4. Integrated AI APIs for automatic breed identification from uploaded photos. Built a complete donation flow with payment gateway integration. Features include adoption matching, lost & found listings, and a community forum. 500+ users in the first month post-launch.",
-    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI API", "Framer Motion"],
+      "Full-stack monorepo built with React, NestJS, and TypeScript. Features AI-powered breed identification, real-time case tracking, adoption matching system, and payment integration for donations. Built with pnpm + Turbo for scalable development. Comprehensive linting and commit conventions for code quality.",
+    tech: ["React", "NestJS", "TypeScript", "Turbo", "pnpm"],
     github: "https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS",
     demo: "https://pawhaven.work",
-    icons: [SiNextdotjs, SiMongodb, SiTailwindcss],
+    icons: [SiReact, SiNodedotjs, SiTailwindcss],
     color: "#f59e0b",
     highlight: true,
   },
@@ -30,13 +28,13 @@ const projects = [
     id: "germany-resume",
     title: "Germany Resume",
     description:
-      "A resume builder tailored for job seekers in Germany, featuring German-standard templates, Markdown support, and one-click PDF export.",
+      "Resume builder tailored for German job market — German-standard templates, Markdown support, one-click PDF export",
     fullDescription:
-      "Built with React + TypeScript + Zustand for state management. Features include Markdown editor with live preview, German-standard templates, i18n support for Chinese/English/German, and high-quality PDF export via browser print. Designed to meet the specific formatting requirements of German resumes: photo placement, personal details layout, and structured sections. Deployed on GitHub Pages.",
-    tech: ["React", "TypeScript", "Zustand", "Tailwind CSS", "Markdown"],
+      "Built with React 19 + TypeScript + Vite + Tailwind CSS 4. Features include Markdown editor with live preview, drag-and-drop section reordering (dnd-kit), i18n support for Chinese/English/German, and high-quality PDF export. Designed for German resume conventions: photo placement, personal details layout, and structured sections.",
+    tech: ["React 19", "TypeScript", "Vite", "Tailwind CSS 4", "Zustand"],
     github: "https://github.com/aoda-zhang/germany-resume",
     demo: "https://aoda-zhang.github.io/germany-resume/",
-    icons: [SiReact, SiNodedotjs, SiTailwindcss],
+    icons: [SiReact, SiTailwindcss],
     color: "#0ea5e9",
     highlight: true,
   },
