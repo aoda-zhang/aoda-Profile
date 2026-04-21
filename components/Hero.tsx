@@ -1,170 +1,133 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
 
 const contacts = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/aodazhang",
-    icon: FaLinkedin,
-  },
-  { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
+  { name: "Email", href: "mailto:aoda.zhang.work@gmail.com", icon: FaEnvelope },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  visible: (d: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: d, duration: 0.5, ease: easeOut },
+  }),
 };
 
 export default function Hero() {
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center py-16 md:py-24">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16">
-        {/* Left: text content */}
+    <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+      {/* Avatar + Name row */}
+      <div className="flex items-center gap-5 mb-8">
         <motion.div
-          className="flex-1 space-y-7"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="flex items-center gap-3">
-            <span className="badge badge-accent">
-              <span className="badge-dot" />
-              Open to opportunities
-            </span>
-          </motion.div>
-
-          {/* Name */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
-          >
-            <span className="text-zinc-900">Hi, I&apos;m </span>
-            <span className="gradient-text-animated">Aoda Zhang</span>
-          </motion.h1>
-
-          {/* Tagline */}
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-zinc-600 font-light max-w-2xl"
-          >
-            Full-Stack Developer building products that{" "}
-            <span className="text-[var(--color-primary)] font-medium">
-              make a difference
-            </span>
-            . Founder of{" "}
-            <a
-              href="https://pawhaven.work"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-accent)] font-semibold hover:underline"
-            >
-              PawHaven
-            </a>
-            .
-          </motion.p>
-
-          {/* Description */}
-          <motion.p
-            variants={itemVariants}
-            className="text-zinc-500 max-w-xl leading-relaxed text-base md:text-lg"
-          >
-            I craft web and mobile applications with React, Node.js, and
-            TypeScript. Passionate about JavaScript ecosystem, open source, and
-            using technology to help others.
-          </motion.p>
-
-          {/* CTA row */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap items-center gap-4"
-          >
-            <a
-              href="mailto:aoda.zhang.work@email.com"
-              className="btn btn-primary"
-            >
-              <FaEnvelope className="w-4 h-4" />
-              Get in Touch
-            </a>
-            <a
-              href="/aoda-zhang.pdf"
-              download="Aoda-Zhang-Full-Stack-Developer.pdf"
-              className="btn btn-outline"
-            >
-              <FaDownload className="w-4 h-4" />
-              Download CV
-            </a>
-            <a
-              href="https://github.com/aoda-zhang"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline"
-            >
-              <FaGithub className="w-4 h-4" />
-              GitHub
-            </a>
-          </motion.div>
-
-          {/* Social icons */}
-          <motion.div variants={itemVariants} className="flex items-center gap-4">
-            {contacts.map((contact) => (
-              <a
-                key={contact.name}
-                href={contact.href}
-                target={contact.name === "Email" ? "_self" : "_blank"}
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[var(--color-primary)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-primary-muted)] transition-all"
-                aria-label={contact.name}
-              >
-                <contact.icon className="w-4 h-4" />
-              </a>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        {/* Right: avatar */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.6, ease: easeOut }}
-          className="flex-shrink-0"
+          transition={{ duration: 0.4, ease: easeOut }}
+          className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-2 ring-[var(--color-rule)] flex-shrink-0"
         >
-          <div className="relative">
-            <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
-              <img
-                src="/assets/images/avatar.jpeg"
-                alt="Aoda Zhang"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 rounded-full border-2 border-[var(--color-accent)] -z-10 translate-x-2 translate-y-2" />
-          </div>
+          <img
+            src="/assets/images/avatar.jpeg"
+            alt="Aoda Zhang"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
+        <div>
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.05}
+            className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--color-ink)]"
+          >
+            Aoda Zhang
+          </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            custom={0.1}
+            className="text-sm md:text-base text-[var(--color-ink-light)] mt-0.5"
+          >
+            Full-Stack Developer · Berlin, Germany
+          </motion.p>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-zinc-300"
+      {/* Bio */}
+      <motion.p
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0.15}
+        className="text-base md:text-lg text-[var(--color-ink-light)] leading-relaxed max-w-xl mb-4"
       >
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+        I build web and mobile applications with React, Node.js, and TypeScript.
+        9+ years shipping products across fintech and e-commerce.
+        Founder of{" "}
+        <a
+          href="https://pawhaven.work"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--color-accent-bright)] hover:underline font-medium"
         >
-          <FaArrowDown className="w-4 h-4" />
-        </motion.div>
+          PawHaven
+        </a>
+        {" "}— an open-source platform for rescuing stray animals.
+      </motion.p>
+
+      <motion.p
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0.2}
+        className="text-sm text-[var(--color-ink-muted)] mb-8"
+      >
+        Open to opportunities
+      </motion.p>
+
+      {/* CTAs + Socials */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0.25}
+        className="flex items-center gap-3 flex-wrap"
+      >
+        <a href="mailto:aoda.zhang.work@gmail.com" className="btn btn-primary">
+          <FaEnvelope className="w-3.5 h-3.5" />
+          Get in Touch
+        </a>
+        <a
+          href="/aoda-zhang.pdf"
+          download
+          className="btn btn-ghost"
+        >
+          Download CV
+        </a>
+
+        {/* Separator */}
+        <span className="hidden md:inline-block w-px h-5 bg-[var(--color-rule)] mx-1" />
+
+        {contacts.map((c) => (
+          <a
+            key={c.name}
+            href={c.href}
+            target={c.name === "Email" ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+            className="w-8 h-8 rounded-md flex items-center justify-center text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-surface-dim)] transition-all"
+            aria-label={c.name}
+          >
+            <c.icon className="w-4 h-4" />
+          </a>
+        ))}
       </motion.div>
+
+      {/* Divider */}
+      <div className="mt-20 border-t border-[var(--color-rule)]" />
     </section>
   );
 }

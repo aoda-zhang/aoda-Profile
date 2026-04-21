@@ -2,21 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaTimes, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const menuMappings = {
-  about: { label: "About", id: "about" },
-  skill: { label: "Skills", id: "skill" },
-  experience: { label: "Experience", id: "experience" },
-  projects: { label: "Projects", id: "project" },
-};
-
-const navItems = Object.values(menuMappings);
-
-const socials = [
-  { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
-  { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
+const navItems = [
+  { label: "Experience", id: "experience" },
+  { label: "Skills", id: "skill" },
+  { label: "Projects", id: "projects" },
 ];
 
 export default function Header() {
@@ -28,7 +19,7 @@ export default function Header() {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
       const sections = navItems.map((item) => document.getElementById(item.id));
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = window.scrollY + 120;
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPos) {
@@ -50,60 +41,50 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-zinc-100"
+          ? "bg-white/80 backdrop-blur-md border-b border-[var(--color-rule)]"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-2xl mx-auto px-6">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <motion.a
-            href="#hero"
-            onClick={(e) => { e.preventDefault(); handleNavClick("hero"); }}
-            className="text-xl font-bold tracking-tight text-zinc-900"
-            whileHover={{ scale: 1.02 }}
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="text-base font-bold tracking-tight text-[var(--color-ink)]"
           >
-            Aoda<span className="text-[var(--color-primary)]">.</span>
-          </motion.a>
+            Aoda<span className="text-[var(--color-accent-bright)]">.</span>
+          </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`nav-link ${activeSection === item.id ? "nav-link-active" : ""}`}
+                className={`text-sm transition-colors ${
+                  activeSection === item.id
+                    ? "text-[var(--color-ink)] font-semibold"
+                    : "text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
+                }`}
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          {/* Desktop socials */}
-          <div className="hidden md:flex items-center gap-2">
-            {socials.map((s) => (
-              <a
-                key={s.name}
-                href={s.href}
-                target={s.name === "Email" ? "_self" : "_blank"}
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[var(--color-primary)] hover:border-[var(--color-primary-light)] hover:bg-[var(--color-primary-muted)] transition-all"
-                aria-label={s.name}
-              >
-                <s.icon className="w-3.5 h-3.5" />
-              </a>
-            ))}
-          </div>
-
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="md:hidden w-9 h-9 flex items-center justify-center text-[var(--color-ink-muted)]"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
+            {menuOpen ? <FaTimes className="w-4 h-4" /> : <FaBars className="w-4 h-4" />}
           </button>
         </div>
       </div>
@@ -115,37 +96,23 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-zinc-100 shadow-lg overflow-hidden"
+            transition={{ duration: 0.15 }}
+            className="md:hidden bg-white border-b border-[var(--color-rule)]"
           >
-            <nav className="px-4 py-3 space-y-1">
+            <nav className="px-6 py-3 space-y-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                  className={`block w-full text-left px-3 py-2 rounded-md text-sm ${
                     activeSection === item.id
-                      ? "text-[var(--color-primary)] bg-[var(--color-primary-muted)]"
-                      : "text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50"
+                      ? "text-[var(--color-ink)] font-semibold bg-[var(--color-surface-dim)]"
+                      : "text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]"
                   }`}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="flex items-center gap-2 pt-3 border-t border-zinc-100 mt-3">
-                {socials.map((s) => (
-                  <a
-                    key={s.name}
-                    href={s.href}
-                    target={s.name === "Email" ? "_self" : "_blank"}
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[var(--color-primary)] hover:border-[var(--color-primary-light)] transition-all"
-                    aria-label={s.name}
-                  >
-                    <s.icon className="w-4 h-4" />
-                  </a>
-                ))}
-              </div>
             </nav>
           </motion.div>
         )}
