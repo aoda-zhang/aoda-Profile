@@ -32,12 +32,14 @@ const itemVariants = {
 export default function Hero() {
   return (
     <section className="min-h-[85vh] flex flex-col justify-center py-16 md:py-24">
-      <motion.div
-        className="space-y-8"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
+        {/* Left: text content */}
+        <motion.div
+          className="flex-1 space-y-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
         {/* Eyebrow badge */}
         <motion.div variants={itemVariants} className="flex items-center gap-3">
           <span className="badge badge-accent">
@@ -151,6 +153,26 @@ export default function Hero() {
           ))}
         </motion.div>
       </motion.div>
+
+      {/* Right: avatar */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.6, ease: easeOut }}
+        className="flex-shrink-0"
+      >
+        <div className="relative">
+          <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <img
+              src="/assets/images/avatar.jpeg"
+              alt="Aoda Zhang"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 rounded-full border-2 border-[var(--color-accent)] -z-10 translate-x-2 translate-y-2" />
+        </div>
+      </motion.div>
+      </div>
 
       {/* Scroll indicator */}
       <motion.div
