@@ -5,12 +5,16 @@ import { motion, easeOut } from "framer-motion";
 
 const contacts = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/aodazhang",
+    icon: FaLinkedin,
+  },
   { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
 ];
 
 const stats = [
-  { label: "Years Experience", value: "8+" },
+  { label: "Years Experience", value: "9+" },
   { label: "Projects Delivered", value: "30+" },
   { label: "Team Members Mentored", value: "10+" },
 ];
@@ -57,8 +61,10 @@ export default function Hero() {
           className="text-xl md:text-2xl text-zinc-600 font-light max-w-2xl"
         >
           Full-Stack Developer building products that{" "}
-          <span className="text-[var(--color-primary)] font-medium">make a difference</span>.
-          Founder of{" "}
+          <span className="text-[var(--color-primary)] font-medium">
+            make a difference
+          </span>
+          . Founder of{" "}
           <a
             href="https://pawhaven.work"
             target="_blank"
@@ -66,7 +72,8 @@ export default function Hero() {
             className="text-[var(--color-accent)] font-semibold hover:underline"
           >
             PawHaven
-          </a>.
+          </a>
+          .
         </motion.p>
 
         {/* Description */}
@@ -74,8 +81,9 @@ export default function Hero() {
           variants={itemVariants}
           className="text-zinc-500 max-w-xl leading-relaxed text-base md:text-lg"
         >
-          I craft web and mobile applications with React, Node.js, and TypeScript.
-          Passionate about JavaScript ecosystem, open source, and using technology to help others.
+          I craft web and mobile applications with React, Node.js, and
+          TypeScript. Passionate about JavaScript ecosystem, open source, and
+          using technology to help others.
         </motion.p>
 
         {/* Stats row */}
@@ -117,7 +125,10 @@ export default function Hero() {
         </motion.div>
 
         {/* Social icons */}
-        <motion.div variants={itemVariants} className="flex items-center gap-4 pt-2">
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center gap-4 pt-2"
+        >
           {contacts.map((contact) => (
             <a
               key={contact.name}

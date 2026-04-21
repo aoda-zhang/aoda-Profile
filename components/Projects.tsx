@@ -13,6 +13,20 @@ import {
 
 const projects = [
   {
+    id: "pawhaven",
+    title: "PawHaven",
+    description:
+      "Open-source platform that helps volunteers, shelters, and adopters report, track, and share stray animal rescue cases",
+    fullDescription:
+      "Developed using Next.js 15 and Tailwind v4. Integrated AI APIs for automatic breed identification from uploaded photos. Built a complete donation flow with payment gateway integration. Features include adoption matching, lost & found listings, and a community forum. 500+ users in the first month post-launch.",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI API", "Framer Motion"],
+    github: "https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS",
+    demo: "https://pawhaven.work",
+    icons: [SiNextdotjs, SiMongodb, SiTailwindcss],
+    color: "#f59e0b",
+    highlight: true,
+  },
+  {
     id: "germany-resume",
     title: "Germany Resume",
     description:
@@ -24,20 +38,6 @@ const projects = [
     demo: "https://aoda-zhang.github.io/germany-resume/",
     icons: [SiReact, SiNodedotjs, SiTailwindcss],
     color: "#0ea5e9",
-    highlight: true,
-  },
-  {
-    id: "pawhaven",
-    title: "PawHaven",
-    description:
-      "Open-source animal rescue platform with AI breed recognition, donation system, and community features.",
-    fullDescription:
-      "Developed using Next.js 15 and Tailwind v4. Integrated AI APIs for automatic breed identification from uploaded photos. Built a complete donation flow with payment gateway integration. Features include adoption matching, lost & found listings, and a community forum. 500+ users in the first month post-launch.",
-    tech: ["Next.js", "Tailwind CSS", "MongoDB", "AI API", "Framer Motion"],
-    github: "https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS",
-    demo: "https://pawhaven.work",
-    icons: [SiNextdotjs, SiMongodb, SiTailwindcss],
-    color: "#f59e0b",
     highlight: true,
   },
 ];
