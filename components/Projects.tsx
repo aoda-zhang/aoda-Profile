@@ -13,15 +13,15 @@ import {
 
 const projects = [
   {
-    id: "super-resume",
-    title: "Super Resume",
+    id: "germany-resume",
+    title: "Germany Resume",
     description:
-      "A feature-rich resume builder with real-time preview, Markdown support, and beautiful templates. Export to PDF with one click.",
+      "A resume builder tailored for job seekers in Germany, featuring German-standard templates, Markdown support, and one-click PDF export.",
     fullDescription:
-      "Built with React + TypeScript + Zustand for state management. Features include Markdown editor with live preview, 4 professionally designed templates, i18n support for Chinese/English/German, and high-quality PDF export via browser print. Deployed on GitHub Pages with automated CI/CD via GitHub Actions.",
+      "Built with React + TypeScript + Zustand for state management. Features include Markdown editor with live preview, German-standard templates, i18n support for Chinese/English/German, and high-quality PDF export via browser print. Designed to meet the specific formatting requirements of German resumes: photo placement, personal details layout, and structured sections. Deployed on GitHub Pages.",
     tech: ["React", "TypeScript", "Zustand", "Tailwind CSS", "Markdown"],
-    github: "https://github.com/aoda-zhang/super-resume",
-    demo: "https://aoda-zhang.github.io/super-resume/",
+    github: "https://github.com/aoda-zhang/germany-resume",
+    demo: "https://aoda-zhang.github.io/germany-resume/",
     icons: [SiReact, SiNodedotjs, SiTailwindcss],
     color: "#0ea5e9",
     highlight: true,
