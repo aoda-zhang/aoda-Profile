@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0f172a;
-  --color-ink-light: #475569;
-  --color-ink-muted: #94a3b8;
-  --color-accent: #1e3a5f;
-  --color-accent-bright: #2563eb;
-  --color-accent-muted: #dbeafe;
-  --color-surface: #ffffff;
-  --color-surface-dim: #f8fafc;
-  --color-rule: #e2e8f0;
+  --color-void: #09090b;
+  --color-surface: #18181b;
+  --color-surface-hover: #1f1f23;
+  --color-border: #27272a;
+  --color-border-light: #3f3f46;
 
-  --font-sans: "Satoshi", "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Satoshi", "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --color-text: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #52525b;
+
+  --color-accent: #f59e0b;
+  --color-accent-dim: #451a03;
+
+  --font-sans: "Satoshi", system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
@@ -22,64 +23,44 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
   }
 
   body {
-    background-color: var(--color-surface);
-    color: var(--color-ink);
+    background-color: var(--color-void);
+    color: var(--color-text);
     font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
   ::selection {
-    background: var(--color-accent-muted);
-    color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-void);
   }
 }
 
-/* ============================================================
-   COMPONENTS
-   ============================================================ */
-
-.section-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-accent-bright);
-  margin-bottom: 0.75rem;
-}
-
-.card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-rule);
-  border-radius: 0.75rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.card:hover {
-  border-color: var(--color-accent-bright);
-  box-shadow: 0 8px 30px rgba(30, 58, 95, 0.08);
-}
+/* ── Utility classes ── */
 
 .tag {
   display: inline-flex;
   align-items: center;
   font-size: 0.75rem;
   font-weight: 500;
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.625rem;
   border-radius: 9999px;
-  background: var(--color-surface-dim);
-  color: var(--color-ink-light);
-  border: 1px solid var(--color-rule);
-  transition: all 0.15s ease;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.15s ease;
+}
+.tag:hover {
+  border-color: var(--color-border-light);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1.125rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 0.5rem;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -91,38 +72,46 @@
 }
 
 .btn-primary {
-  background: var(--color-ink);
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-void);
 }
 .btn-primary:hover {
-  background: var(--color-accent);
+  background: #d97706;
   transform: translateY(-1px);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--color-ink-light);
-  border: 1px solid var(--color-rule);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
 }
 .btn-ghost:hover {
-  border-color: var(--color-ink);
-  color: var(--color-ink);
+  border-color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
-/* ============================================================
-   SCROLLBAR
-   ============================================================ */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+  border-color: var(--color-border-light);
+  transform: translateY(-2px);
+}
 
-::-webkit-scrollbar {
-  width: 5px;
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  pointer-events: none;
 }
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-rule);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-ink-muted);
-}
+
+/* ── Scrollbar ── */
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-light); }

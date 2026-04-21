@@ -1,7 +1,8 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa6";
 
 const contacts = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
@@ -10,124 +11,131 @@ const contacts = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 20 },
   visible: (d: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: d, duration: 0.5, ease: easeOut },
+    transition: { delay: d, duration: 0.6, ease: easeOut },
   }),
 };
 
 export default function Hero() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* Avatar + Name row */}
-      <div className="flex items-center gap-5 mb-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, ease: easeOut }}
-          className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden ring-2 ring-[var(--color-rule)] flex-shrink-0"
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+      {/* Background glows */}
+      <div className="glow w-[500px] h-[500px] bg-amber-500 -top-40 -right-40 absolute" />
+      <div className="glow w-[400px] h-[400px] bg-blue-600 bottom-20 -left-32 absolute" style={{ opacity: 0.06 }} />
+
+      <div className="max-w-3xl mx-auto px-6 w-full relative z-10 pb-24">
+        {/* Label */}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0}
+          className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-6"
         >
-          <img
-            src="/assets/images/avatar.jpeg"
-            alt="Aoda Zhang"
-            className="w-full h-full object-cover"
-          />
+          Full-Stack Developer
+        </motion.p>
+
+        {/* Name */}
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.08}
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] text-[var(--color-text)]"
+        >
+          Aoda
+          <br />
+          <span className="text-[var(--color-text-muted)]">Zhang.</span>
+        </motion.h1>
+
+        {/* Bio */}
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.18}
+          className="mt-8 text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-lg"
+        >
+          9+ years building products with React, Node.js & TypeScript.
+          Currently based in Berlin. Founder of{" "}
+          <a
+            href="https://pawhaven.work"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-accent)] hover:underline font-medium"
+          >
+            PawHaven
+          </a>
+          .
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.26}
+          className="mt-10 flex flex-wrap items-center gap-3"
+        >
+          <a href="mailto:aoda.zhang.work@gmail.com" className="btn btn-primary">
+            <FaEnvelope className="w-4 h-4" />
+            Say Hello
+          </a>
+          <a href="/aoda-zhang.pdf" download className="btn btn-ghost">
+            Resume
+          </a>
+          <a
+            href="https://github.com/aoda-zhang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost"
+          >
+            <FaGithub className="w-4 h-4" />
+            GitHub
+          </a>
         </motion.div>
-        <div>
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.05}
-            className="text-2xl md:text-3xl font-bold tracking-tight text-[var(--color-ink)]"
-          >
-            Aoda Zhang
-          </motion.h1>
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.1}
-            className="text-sm md:text-base text-[var(--color-ink-light)] mt-0.5"
-          >
-            Full-Stack Developer · Berlin, Germany
-          </motion.p>
-        </div>
+
+        {/* Social row */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.34}
+          className="mt-12 flex items-center gap-4"
+        >
+          {contacts.map((c) => (
+            <a
+              key={c.name}
+              href={c.href}
+              target={c.name === "Email" ? "_self" : "_blank"}
+              rel="noopener noreferrer"
+              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              aria-label={c.name}
+            >
+              <c.icon className="w-[18px] h-[18px]" />
+            </a>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Bio */}
-      <motion.p
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.15}
-        className="text-base md:text-lg text-[var(--color-ink-light)] leading-relaxed max-w-xl mb-4"
-      >
-        I build web and mobile applications with React, Node.js, and TypeScript.
-        9+ years shipping products across fintech and e-commerce.
-        Founder of{" "}
-        <a
-          href="https://pawhaven.work"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[var(--color-accent-bright)] hover:underline font-medium"
-        >
-          PawHaven
-        </a>
-        {" "}— an open-source platform for rescuing stray animals.
-      </motion.p>
-
-      <motion.p
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.2}
-        className="text-sm text-[var(--color-ink-muted)] mb-8"
-      >
-        Open to opportunities
-      </motion.p>
-
-      {/* CTAs + Socials */}
+      {/* Scroll hint */}
       <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.25}
-        className="flex items-center gap-3 flex-wrap"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <a href="mailto:aoda.zhang.work@gmail.com" className="btn btn-primary">
-          <FaEnvelope className="w-3.5 h-3.5" />
-          Get in Touch
-        </a>
-        <a
-          href="/aoda-zhang.pdf"
-          download
-          className="btn btn-ghost"
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="text-[var(--color-text-muted)]"
         >
-          Download CV
-        </a>
-
-        {/* Separator */}
-        <span className="hidden md:inline-block w-px h-5 bg-[var(--color-rule)] mx-1" />
-
-        {contacts.map((c) => (
-          <a
-            key={c.name}
-            href={c.href}
-            target={c.name === "Email" ? "_self" : "_blank"}
-            rel="noopener noreferrer"
-            className="w-8 h-8 rounded-md flex items-center justify-center text-[var(--color-ink-muted)] hover:text-[var(--color-ink)] hover:bg-[var(--color-surface-dim)] transition-all"
-            aria-label={c.name}
-          >
-            <c.icon className="w-4 h-4" />
-          </a>
-        ))}
+          <FaArrowDown className="w-4 h-4" />
+        </motion.div>
       </motion.div>
-
-      {/* Divider */}
-      <div className="mt-20 border-t border-[var(--color-rule)]" />
     </section>
   );
 }

@@ -7,10 +7,10 @@ import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--color-surface)]">
+    <div className="min-h-screen bg-[var(--color-void)]">
       <Header />
-      <main className="max-w-2xl mx-auto px-6">
-        <Hero />
+      <Hero />
+      <main className="max-w-3xl mx-auto px-6">
         <Experience />
         <Skill />
         <Projects />
