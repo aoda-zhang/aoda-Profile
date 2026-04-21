@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload } from "react-icons/fa";
 import { motion, easeOut } from "framer-motion";
 
 const contacts = [
@@ -121,6 +121,14 @@ export default function Hero() {
           >
             <FaGithub className="w-4 h-4" />
             View GitHub
+          </a>
+          <a
+            href="/aoda-zhang.pdf"
+            download="Aoda-Zhang-Full-Stack-Developer.pdf"
+            className="btn btn-outline"
+          >
+            <FaDownload className="w-4 h-4" />
+            Download CV
           </a>
         </motion.div>
 
