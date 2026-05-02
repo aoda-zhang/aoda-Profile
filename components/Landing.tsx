@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaArrowDown } from "react-icons/fa6";
+import { babyImages } from "@/data/mockImages";
 
 export default function Landing() {
   const ref = useRef<HTMLDivElement>(null);
@@ -134,6 +135,22 @@ export default function Landing() {
             <FaArrowDown className="w-3.5 h-3.5" />
           </motion.span>
         </motion.button>
+      </motion.div>
+
+      {/* Personal image — floating softly in the background */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
+        className="absolute bottom-[15%] right-[8%] w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border border-[var(--color-border)] opacity-30"
+        style={{ boxShadow: "0 0 60px rgba(245,158,11,0.15)" }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={babyImages[0].src}
+          alt="personal"
+          className="w-full h-full object-cover"
+        />
       </motion.div>
 
       {/* Bottom fade */}
