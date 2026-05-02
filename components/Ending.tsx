@@ -40,7 +40,7 @@ export default function Ending() {
               href={s.href}
               target={s.name === "Email" ? "_self" : "_blank"}
               rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
               aria-label={s.name}
             >
               <s.icon className="w-5 h-5" />
