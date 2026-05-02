@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,9 +33,10 @@ export default function Header() {
             <a
               href="/aoda-zhang.pdf"
               download
-              className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
             >
-              CV
+              <FaDownload className="w-3.5 h-3.5" />
+              Download CV
             </a>
             <a
               href="https://github.com/aoda-zhang"
