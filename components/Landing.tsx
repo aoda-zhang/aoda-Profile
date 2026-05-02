@@ -12,22 +12,41 @@ export default function Landing() {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const imageOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
     <section
       ref={ref}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Nature-inspired background layers */}
+      {/* Full-bleed hero image — fades out on scroll */}
       <motion.div
-        style={{ y }}
-        className="absolute inset-0 bg-gradient-to-b from-[#09090b] via-[#0f1a0f] to-[#09090b]"
+        style={{ opacity: imageOpacity, scale: imageScale }}
+        className="absolute inset-0"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={babyImages[0].src}
+          alt="hero"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay so text stays readable */}
+        <div className="absolute inset-0 bg-[var(--color-void)]/70" />
+      </motion.div>
+
+      {/* Nature-inspired gradient above the image */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(15,26,15,0.5) 0%, transparent 40%, rgba(245,158,11,0.04) 100%)",
+        }}
       />
 
-      {/* Subtle tree/forest silhouette shapes */}
-      <div className="absolute inset-0 opacity-[0.05]">
+      {/* Subtle tree silhouette on top */}
+      <div className="absolute inset-0 z-[1] opacity-[0.06] pointer-events-none">
         <svg
           viewBox="0 0 1440 900"
           className="w-full h-full"
@@ -39,52 +58,12 @@ export default function Landing() {
             d="M0 900 Q200 600 400 700 Q600 500 800 650 Q1000 450 1200 600 Q1350 500 1440 580 L1440 900 Z"
             fill="#2d6a2d"
           />
-          <path
-            d="M0 900 Q300 700 500 780 Q700 600 900 720 Q1100 580 1300 700 Q1380 620 1440 680 L1440 900 Z"
-            fill="#1a4a1a"
-          />
-          <circle cx="200" cy="620" r="80" fill="#1a4a1a" opacity="0.6" />
-          <circle cx="450" cy="560" r="100" fill="#1a4a1a" opacity="0.5" />
-          <circle cx="700" cy="600" r="70" fill="#1a4a1a" opacity="0.6" />
-          <circle cx="1000" cy="580" r="90" fill="#1a4a1a" opacity="0.5" />
-          <circle cx="1250" cy="620" r="75" fill="#1a4a1a" opacity="0.6" />
         </svg>
       </div>
 
-      {/* Warm light ray */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[450px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(245,158,11,0.1) 0%, transparent 70%)",
-        }}
-      />
-
-      {/* Floating exploration dots — scattered for discovery feel */}
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        className="absolute top-[20%] left-[15%] w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] opacity-20"
-      />
-      <motion.div
-        animate={{ y: [0, 6, 0] }}
-        transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
-        className="absolute top-[35%] right-[20%] w-1 h-1 rounded-full bg-[var(--color-accent)] opacity-15"
-      />
-      <motion.div
-        animate={{ y: [0, -5, 0] }}
-        transition={{ repeat: Infinity, duration: 3.8, ease: "easeInOut" }}
-        className="absolute bottom-[30%] left-[25%] w-1 h-1 rounded-full bg-[#4ade80] opacity-20"
-      />
-      <motion.div
-        animate={{ y: [0, 7, 0] }}
-        transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
-        className="absolute top-[55%] right-[12%] w-1.5 h-1.5 rounded-full bg-[#4ade80] opacity-10"
-      />
-
       {/* Content */}
       <motion.div
-        style={{ opacity }}
+        style={{ y: textY }}
         className="relative z-10 max-w-2xl mx-auto px-6 text-center"
       >
         <motion.p
@@ -121,9 +100,7 @@ export default function Landing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
           onClick={() =>
-            document
-              .getElementById("engineer")
-              ?.scrollIntoView({ behavior: "smooth" })
+            document.getElementById("engineer")?.scrollIntoView({ behavior: "smooth" })
           }
           className="mt-10 inline-flex items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[#d97706] transition-colors cursor-pointer"
         >
@@ -137,24 +114,8 @@ export default function Landing() {
         </motion.button>
       </motion.div>
 
-      {/* Personal image — floating softly in the background */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
-        className="absolute bottom-[15%] right-[8%] w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden border border-[var(--color-border)] opacity-30"
-        style={{ boxShadow: "0 0 60px rgba(245,158,11,0.15)" }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={babyImages[0].src}
-          alt="personal"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
-
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 z-10 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
     </section>
   );
 }
