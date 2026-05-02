@@ -29,12 +29,19 @@ export default function Header() {
             aoda<span className="text-[var(--color-accent)]">.</span>
           </button>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
+            <a
+              href="/aoda-zhang.pdf"
+              download
+              className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
+            >
+              CV
+            </a>
             <a
               href="https://github.com/aoda-zhang"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
               aria-label="GitHub"
             >
               <FaGithub className="w-4.5 h-4.5" />
@@ -43,7 +50,7 @@ export default function Header() {
               href="https://www.linkedin.com/in/aodazhang"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
               aria-label="LinkedIn"
             >
               <FaLinkedin className="w-4.5 h-4.5" />
