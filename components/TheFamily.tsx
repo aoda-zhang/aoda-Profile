@@ -5,17 +5,14 @@ import { babyImages } from "@/data/mockImages";
 
 export default function TheFamily() {
   return (
-    <section
-      id="family"
-      className="py-32 md:py-40 px-6"
-    >
+    <section id="family" className="py-20 md:py-28 px-6">
       <div className="max-w-xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-bold tracking-[0.15em] uppercase text-[var(--color-accent)] mb-20"
+          className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-accent)] mb-14"
         >
           The Family
         </motion.p>
@@ -25,14 +22,14 @@ export default function TheFamily() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl md:text-4xl font-black leading-tight text-[var(--color-text)] mb-10"
+          className="text-4xl md:text-5xl font-black leading-tight text-[var(--color-text)] mb-8"
         >
           On June 7, 2025,
           <br />
           I became a father.
         </motion.h2>
 
-        {/* Single quiet image — no carousel, just the moment */}
+        {/* Single quiet image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}

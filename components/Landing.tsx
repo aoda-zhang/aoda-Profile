@@ -26,7 +26,7 @@ export default function Landing() {
       />
 
       {/* Subtle tree/forest silhouette shapes */}
-      <div className="absolute inset-0 opacity-[0.04]">
+      <div className="absolute inset-0 opacity-[0.05]">
         <svg
           viewBox="0 0 1440 900"
           className="w-full h-full"
@@ -42,7 +42,6 @@ export default function Landing() {
             d="M0 900 Q300 700 500 780 Q700 600 900 720 Q1100 580 1300 700 Q1380 620 1440 680 L1440 900 Z"
             fill="#1a4a1a"
           />
-          {/* Tree silhouettes */}
           <circle cx="200" cy="620" r="80" fill="#1a4a1a" opacity="0.6" />
           <circle cx="450" cy="560" r="100" fill="#1a4a1a" opacity="0.5" />
           <circle cx="700" cy="600" r="70" fill="#1a4a1a" opacity="0.6" />
@@ -53,11 +52,33 @@ export default function Landing() {
 
       {/* Warm light ray */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[450px] rounded-full"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(245,158,11,0.08) 0%, transparent 70%)",
+            "radial-gradient(ellipse at center, rgba(245,158,11,0.1) 0%, transparent 70%)",
         }}
+      />
+
+      {/* Floating exploration dots — scattered for discovery feel */}
+      <motion.div
+        animate={{ y: [0, -8, 0] }}
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+        className="absolute top-[20%] left-[15%] w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] opacity-20"
+      />
+      <motion.div
+        animate={{ y: [0, 6, 0] }}
+        transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
+        className="absolute top-[35%] right-[20%] w-1 h-1 rounded-full bg-[var(--color-accent)] opacity-15"
+      />
+      <motion.div
+        animate={{ y: [0, -5, 0] }}
+        transition={{ repeat: Infinity, duration: 3.8, ease: "easeInOut" }}
+        className="absolute bottom-[30%] left-[25%] w-1 h-1 rounded-full bg-[#4ade80] opacity-20"
+      />
+      <motion.div
+        animate={{ y: [0, 7, 0] }}
+        transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+        className="absolute top-[55%] right-[12%] w-1.5 h-1.5 rounded-full bg-[#4ade80] opacity-10"
       />
 
       {/* Content */}
@@ -69,7 +90,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-[var(--color-text-muted)] text-sm tracking-widest uppercase mb-8"
+          className="text-[var(--color-text-muted)] text-xs tracking-[0.25em] uppercase mb-10"
         >
           A journey through code and life
         </motion.p>
@@ -78,7 +99,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1] text-[var(--color-text)]"
+          className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] text-[var(--color-text)]"
         >
           Every day feels like
           <br />
@@ -89,7 +110,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
-          className="mt-6 text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed"
+          className="mt-6 text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed"
         >
           Not a portfolio. A path you walk through.
         </motion.p>
@@ -103,16 +124,12 @@ export default function Landing() {
               .getElementById("engineer")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="mt-10 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] hover:text-[#d97706] transition-colors cursor-pointer group"
+          className="mt-10 inline-flex items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[#d97706] transition-colors cursor-pointer"
         >
           Start walking
           <motion.span
-            animate={{ y: [0, 4, 0] }}
-            transition={{
-              repeat: Infinity,
-              duration: 1.8,
-              ease: "easeInOut",
-            }}
+            animate={{ y: [0, 5, 0] }}
+            transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
           >
             <FaArrowDown className="w-3.5 h-3.5" />
           </motion.span>
@@ -120,7 +137,7 @@ export default function Landing() {
       </motion.div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
     </section>
   );
 }

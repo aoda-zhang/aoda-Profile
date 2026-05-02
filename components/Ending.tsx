@@ -11,7 +11,7 @@ const socials = [
 
 export default function Ending() {
   return (
-    <footer className="py-32 md:py-40 px-6">
+    <footer className="py-20 md:py-28 px-6">
       <div className="max-w-xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -19,7 +19,7 @@ export default function Ending() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="text-3xl md:text-4xl font-black text-[var(--color-text)] mb-4">
+          <p className="text-4xl md:text-5xl font-black text-[var(--color-text)] mb-3">
             Still exploring.
           </p>
           <p className="text-sm text-[var(--color-text-muted)]">
@@ -32,7 +32,7 @@ export default function Ending() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-12 flex items-center justify-center gap-6"
+          className="mt-10 flex items-center justify-center gap-6"
         >
           {socials.map((s) => (
             <a
@@ -53,9 +53,9 @@ export default function Ending() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-16 text-xs text-[var(--color-text-muted)]"
+          className="mt-14 text-xs text-[var(--color-text-muted)]"
         >
-          © {new Date().getFullYear()} Aoda Zhang · Berlin
+          © {new Date().getFullYear()} Aoda Zhang &middot; Berlin
         </motion.p>
       </div>
     </footer>
