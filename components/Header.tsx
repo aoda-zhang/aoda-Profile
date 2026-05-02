@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,6 +28,27 @@ export default function Header() {
           >
             aoda<span className="text-[var(--color-accent)]">.</span>
           </button>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/aoda-zhang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              aria-label="GitHub"
+            >
+              <FaGithub className="w-4.5 h-4.5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aodazhang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin className="w-4.5 h-4.5" />
+            </a>
+          </div>
         </div>
       </div>
     </header>

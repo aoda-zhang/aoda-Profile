@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function TheEngineer() {
   return (
@@ -35,7 +35,17 @@ export default function TheEngineer() {
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
           >
             <FaGithub className="w-4 h-4" />
-            See my work on GitHub &rarr;
+            GitHub
+          </a>
+          <span className="text-[var(--color-border)]">&middot;</span>
+          <a
+            href="https://www.linkedin.com/in/aodazhang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+          >
+            <FaLinkedin className="w-4 h-4" />
+            LinkedIn
           </a>
         </motion.div>
       </div>
