@@ -6,15 +6,15 @@ import { FaGithub, FaLinkedin, FaArrowUpRightFromSquare } from "react-icons/fa6"
 const capabilities = [
   {
     title: "Frontend engineering",
-    detail: "React · TypeScript · Frontend architecture · Reusable component libraries · Design systems",
+    detail: "React · TypeScript · Microfrontends · Design systems · Component libraries · React Native",
   },
   {
     title: "Full-stack development",
-    detail: "Node.js · NestJS · API design · Service integration · Data-driven applications",
+    detail: "Node.js · Express.js · NestJS · REST APIs · MongoDB · Service integration",
   },
   {
     title: "AI engineering",
-    detail: "LLM integration · Agent harnesses and workflows · AI-assisted development tools · Engineering automation",
+    detail: "AI-powered development workflows · Agent harness design · Automated review and maintenance · Developer tooling",
   },
 ];
 
@@ -39,10 +39,7 @@ export default function TheEngineer() {
           </h2>
 
           <p className="mb-10 max-w-lg text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-            I enjoy turning complex problems into clear, dependable products.
-            Over the past 9+ years, I&apos;ve grown from frontend-focused
-            development into full-stack engineering, while continuing to
-            explore how AI can improve the way software is built.
+            I build enterprise fintech and e-commerce applications, with 9+ years of experience spanning frontend engineering and full-stack delivery. I specialize in React, TypeScript, frontend architecture, and component systems, with hands-on Node.js backend experience. I also build AI-powered engineering tools that improve development workflows, testing, code review, and knowledge sharing.
           </p>
 
           <div className="mb-4">
@@ -72,9 +69,7 @@ export default function TheEngineer() {
               PawHaven
             </h3>
             <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              An open-source rescue-animal platform built to bring people and animals
-              in need closer together. It showcases my work in product thinking
-              and full-stack architecture.
+              An open-source animal rescue platform I am building end to end, combining product design, modular full-stack architecture, reusable components, and an AI-powered engineering harness for development workflows, testing, and code review.
             </p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
               <a
