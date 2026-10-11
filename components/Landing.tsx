@@ -65,7 +65,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-5xl font-black leading-tight tracking-tight text-[var(--color-accent)] sm:text-6xl md:text-7xl"
+          className="text-6xl font-black leading-tight tracking-tight text-[var(--color-accent)] sm:text-7xl md:text-8xl"
         >
           Aoda Zhang
         </motion.h1>
@@ -74,7 +74,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
-          className="mt-5 text-xl font-semibold leading-snug text-[var(--color-text)] sm:text-2xl md:text-3xl"
+          className="mt-5 text-2xl font-semibold leading-snug text-[var(--color-text)] sm:text-3xl md:text-4xl"
         >
           Frontend-Focused Full-Stack Engineer
         </motion.p>
@@ -83,7 +83,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
-          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg"
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-text-secondary)] md:text-xl"
         >
           9+ years building thoughtful, user-focused software — from frontend architecture and full-stack products to exploring practical AI engineering.
         </motion.p>
@@ -92,7 +92,7 @@ export default function Landing() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
-          className="mt-4 text-sm text-[var(--color-text-muted)] md:text-base"
+          className="mt-4 text-base text-[var(--color-text-muted)] md:text-lg"
         >
           A journey through code and life, guided by curiosity and a love of the outdoors.
         </motion.p>
