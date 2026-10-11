@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import TheEngineer from "@/components/TheEngineer";
+import Experience from "@/components/Experience";
 import TheShift from "@/components/TheShift";
 import TheJourney from "@/components/TheJourney";
 import TheFamily from "@/components/TheFamily";
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <Landing />
       <TheEngineer />
+      <Experience />
       <TheShift />
       <TheJourney />
       <TheFamily />
