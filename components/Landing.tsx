@@ -21,7 +21,6 @@ export default function Landing() {
       ref={ref}
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Full-bleed hero image — fades out on scroll */}
       <motion.div
         style={{ opacity: imageOpacity, scale: imageScale }}
         className="absolute inset-0"
@@ -32,11 +31,9 @@ export default function Landing() {
           alt={hikeImages[0].alt}
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay so text stays readable */}
         <div className="absolute inset-0 bg-[var(--color-void)]/70" />
       </motion.div>
 
-      {/* Nature-inspired gradient above the image */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
         style={{
@@ -45,7 +42,6 @@ export default function Landing() {
         }}
       />
 
-      {/* Subtle tree silhouette on top */}
       <div className="absolute inset-0 z-[1] opacity-[0.06] pointer-events-none">
         <svg
           viewBox="0 0 1440 900"
@@ -61,38 +57,45 @@ export default function Landing() {
         </svg>
       </div>
 
-      {/* Content */}
       <motion.div
         style={{ y: textY }}
-        className="relative z-10 max-w-2xl mx-auto px-6 text-center"
+        className="relative z-10 max-w-4xl mx-auto px-6 text-center"
       >
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-          className="text-[var(--color-text-muted)] text-xs tracking-[0.25em] uppercase mb-10"
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          className="text-[var(--color-accent)] text-sm md:text-base font-semibold tracking-[0.2em] uppercase mb-5"
         >
-          A journey through code and life
+          Aoda Zhang
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
-          className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] text-[var(--color-text)]"
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+          className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight text-[var(--color-text)]"
         >
-          Every day feels like
-          <br />
-          <span className="text-[var(--color-accent)]">a new beginning.</span>
+          Frontend-Focused Full-Stack Engineer
+          <span className="block mt-2 text-[var(--color-accent)]">& AI Engineer</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
-          className="mt-6 text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed"
+          transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
+          className="mt-7 text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed"
         >
-          Not a portfolio. A path you walk through.
+          9+ years building thoughtful software with React, TypeScript, and modern backend technologies.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.7, ease: "easeOut" }}
+          className="mt-4 text-sm md:text-base text-[var(--color-text-muted)]"
+        >
+          A journey through code and life — always exploring what technology can make possible.
         </motion.p>
 
         <motion.button
@@ -104,7 +107,7 @@ export default function Landing() {
           }
           className="mt-10 inline-flex items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] hover:text-[#d97706] transition-colors cursor-pointer"
         >
-          Start walking
+          Explore my expertise
           <motion.span
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
@@ -114,7 +117,6 @@ export default function Landing() {
         </motion.button>
       </motion.div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 z-10 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
     </section>
   );
