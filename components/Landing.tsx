@@ -3,7 +3,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaArrowDown } from "react-icons/fa6";
-import { hikeImages } from "@/data/mockImages";
 
 export default function Landing() {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,50 +11,23 @@ export default function Landing() {
     offset: ["start start", "end start"],
   });
 
-  const imageOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.08]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
     <section
       ref={ref}
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white"
     >
-      <motion.div
-        style={{ opacity: imageOpacity, scale: imageScale }}
-        className="absolute inset-0"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={hikeImages[0].src}
-          alt={hikeImages[0].alt}
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-white/55" />
-      </motion.div>
-
       <div
-        className="pointer-events-none absolute inset-0 z-[1]"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(255,255,255,0.22) 0%, transparent 45%, rgba(255,255,255,0.12) 100%)",
+            "radial-gradient(ellipse at 50% 42%, rgba(180,83,9,0.07) 0%, rgba(255,255,255,0) 58%)",
         }}
       />
 
-      <div className="pointer-events-none absolute inset-0 z-[1] opacity-[0.06]">
-        <svg
-          viewBox="0 0 1440 900"
-          className="h-full w-full"
-          preserveAspectRatio="xMidYMid slice"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 900 Q200 600 400 700 Q600 500 800 650 Q1000 450 1200 600 Q1350 500 1440 580 L1440 900 Z"
-            fill="#2d6a2d"
-          />
-        </svg>
-      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-amber-50/40 to-transparent" />
 
       <motion.div
         style={{ y: textY }}
@@ -104,7 +76,7 @@ export default function Landing() {
           onClick={() =>
             document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })
           }
-          className="mt-10 inline-flex cursor-pointer items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] transition-colors hover:text-[#d97706]"
+          className="mt-10 inline-flex cursor-pointer items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] transition-colors hover:text-[#92400e]"
         >
           View my experience
           <motion.span
@@ -115,8 +87,6 @@ export default function Landing() {
           </motion.span>
         </motion.button>
       </motion.div>
-
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-20 bg-gradient-to-t from-[var(--color-void)] to-transparent" />
     </section>
   );
 }
