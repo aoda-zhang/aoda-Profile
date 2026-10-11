@@ -9,10 +9,10 @@ const experiences = [
     company: "Manulife",
     period: "2022 — Present",
     summary:
-      "Build and evolve enterprise financial applications, combining frontend product work with backend services and API integration.",
+      "Build enterprise investment applications across frontend architecture, shared UI foundations, and backend service integration.",
     highlights: [
-      "Contributed to investment experiences serving 50,000+ customers, supporting a reported 65% investment conversion rate.",
-      "Delivered features across application boundaries, connecting user-facing workflows with backend capabilities.",
+      "Led design-token implementation across five microfrontend services, standardizing styling and reducing frontend styling issues by at least 30%.",
+      "Refactored a legacy React PDF reporting module, reducing development time for new reports by 40%; designed a component-library architecture with AI-powered review and maintenance.",
     ],
   },
   {
@@ -20,10 +20,10 @@ const experiences = [
     company: "Newegg",
     period: "2021 — 2022",
     summary:
-      "Focused on improving frontend delivery and making shared UI foundations more effective for product teams.",
+      "Led an Angular-to-React microfrontend migration across three teams with zero production downtime, and built A+ content marketplace features that improved seller publishing efficiency by 40%.",
     highlights: [
-      "Built and improved a shared library of 50+ reusable components, helping reduce feature delivery time by 35%.",
-      "Improved consistency across interfaces by building reusable patterns instead of solving the same UI problems repeatedly.",
+      "Delivered 12+ React Native mobile features that enabled end-to-end store management for sellers.",
+      "Built core e-commerce cart and inventory features for a platform serving 2,000+ daily users.",
     ],
   },
   {
@@ -34,7 +34,7 @@ const experiences = [
       "Built practical web application features and reusable interfaces for day-to-day business workflows.",
     highlights: [
       "Delivered e-commerce cart and inventory functionality for an application serving 2,000+ daily users.",
-      "Contributed to an employee attendance platform used by 1,000+ employees, helping reduce manual HR workload by approximately 60%.",
+      "Built a React-based attendance platform for 1,000+ employees, reducing manual HR workload by approximately 60%.",
     ],
   },
 ];
