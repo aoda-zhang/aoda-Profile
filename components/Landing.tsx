@@ -85,7 +85,7 @@ export default function Landing() {
           transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg"
         >
-          9+ years building thoughtful, user-focused software — from frontend architecture to full-stack product delivery.
+          9+ years building thoughtful, user-focused software — from frontend architecture and full-stack products to exploring practical AI engineering.
         </motion.p>
 
         <motion.p
