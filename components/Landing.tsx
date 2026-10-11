@@ -31,14 +31,14 @@ export default function Landing() {
           alt={hikeImages[0].alt}
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[var(--color-void)]/70" />
+        <div className="absolute inset-0 bg-white/55" />
       </motion.div>
 
       <div
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(15,26,15,0.5) 0%, transparent 40%, rgba(245,158,11,0.04) 100%)",
+            "linear-gradient(to bottom, rgba(255,255,255,0.22) 0%, transparent 45%, rgba(255,255,255,0.12) 100%)",
         }}
       />
 
