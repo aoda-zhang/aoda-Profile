@@ -61,53 +61,52 @@ export default function Landing() {
         style={{ y: textY }}
         className="relative z-10 mx-auto max-w-4xl px-6 text-center"
       >
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-          className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] md:text-base"
-        >
-          Aoda Zhang
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-          className="text-4xl font-black leading-tight text-[var(--color-text)] sm:text-5xl md:text-6xl"
+          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+          className="text-5xl font-black leading-tight tracking-tight text-[var(--color-accent)] sm:text-6xl md:text-7xl"
         >
-          Frontend-Focused Full-Stack Engineer
-          <span className="mt-2 block text-[var(--color-accent)]">&amp; AI Engineer</span>
+          Aoda Zhang
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-          className="mt-7 text-lg leading-relaxed text-[var(--color-text-secondary)] md:text-xl"
+          transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
+          className="mt-5 text-xl font-semibold leading-snug text-[var(--color-text)] sm:text-2xl md:text-3xl"
         >
-          9+ years building thoughtful software with React, TypeScript, and modern backend technologies.
+          Frontend-Focused Full-Stack Engineer
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg"
+        >
+          9+ years building thoughtful, user-focused software — from frontend architecture to full-stack product delivery.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
           className="mt-4 text-sm text-[var(--color-text-muted)] md:text-base"
         >
-          A journey through code and life — always exploring what technology can make possible.
+          A journey through code and life, guided by curiosity and a love of the outdoors.
         </motion.p>
 
         <motion.button
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 1.3, duration: 0.6, ease: "easeOut" }}
           onClick={() =>
             document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })
           }
           className="mt-10 inline-flex cursor-pointer items-center gap-2.5 text-sm font-semibold text-[var(--color-accent)] transition-colors hover:text-[#d97706]"
         >
-          Explore my experience
+          View my experience
           <motion.span
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
