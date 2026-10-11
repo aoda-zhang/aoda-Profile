@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const socials = [
   { name: "GitHub", href: "https://github.com/aoda-zhang", icon: FaGithub },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/aodazhang", icon: FaLinkedin },
-  { name: "Email", href: "mailto:aoda.zhang.work@email.com", icon: FaEnvelope },
+  { name: "Email", href: "mailto:aoda.zhang.work@gmail.com", icon: FaEnvelope },
 ];
 
 export default function About() {
@@ -45,14 +45,10 @@ export default function About() {
           className="space-y-5 text-center md:text-left"
         >
           <p className="text-zinc-600 leading-relaxed">
-            I discovered software development through web development, and ever since,
-            I&apos;ve been passionate about all things JavaScript—from frontend to backend,
-            mobile to desktop. With 8+ years of experience, I&apos;ve shipped products
-            used by thousands of users across financial services and e-commerce.
+            I&apos;m a full-stack software engineer with 9+ years of experience building enterprise fintech and e-commerce applications. My core strengths are React, TypeScript, frontend architecture, and reusable component systems, complemented by hands-on Node.js backend development, API design, and service integration.
           </p>
           <p className="text-zinc-600 leading-relaxed">
-            I believe technology exists to serve humanity. Besides taking care of my newborn child,
-            I dedicate most of my time to{" "}
+            I also build beyond my day job. PawHaven is my open-source animal rescue platform, where I bring together product thinking, full-stack architecture, and AI-powered engineering workflows. I care about building maintainable software that solves practical problems. I dedicate time to{" "}
             <a
               href="https://pawhaven.work"
               target="_blank"
