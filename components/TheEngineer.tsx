@@ -66,25 +66,36 @@ export default function TheEngineer() {
 
           <div className="mt-9 rounded-2xl border border-[var(--color-border)] p-5 md:p-6">
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-accent)]">
-              Personal project
+              Open-source project
             </p>
             <h3 className="mb-2 text-lg font-semibold text-[var(--color-text)]">
               PawHaven
             </h3>
             <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-              A rescue-animal platform I&apos;m building to help bring people
-              and animals in need closer together. It brings together product
-              thinking, full-stack architecture, and AI-assisted development.
+              An open-source rescue-animal platform built to bring people and animals
+              in need closer together. It showcases my work in product thinking
+              and full-stack architecture.
             </p>
-            <a
-              href="https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
-            >
-              Explore the project
-              <FaArrowUpRightFromSquare className="h-3 w-3" />
-            </a>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+              <a
+                href="https://pawhaven.work/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+              >
+                Visit live site
+                <FaArrowUpRightFromSquare className="h-3 w-3" />
+              </a>
+              <a
+                href="https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
+              >
+                View source code
+                <FaGithub className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
 
           <div className="mt-8 flex items-center gap-5">
