@@ -5,23 +5,23 @@ import { useRef } from "react";
 
 const shifts = [
   {
-    text: "At first, I planned to list all my skills and work experience here.",
+    text: "I used to think a portfolio should be a list of skills, roles, and things delivered.",
     delay: 0,
   },
   {
-    text: "But after a hiking trip, I started thinking differently.",
+    text: "Time outdoors gave me a little distance from that idea.",
     delay: 0.15,
   },
   {
-    text: "Yes, I genuinely enjoy coding.",
+    text: "I still love the craft of software: untangling complexity, shaping systems, and making ideas work.",
     delay: 0.3,
   },
   {
-    text: "I find real satisfaction in building things that can actually help people.",
+    text: "These days, that curiosity also leads me into AI engineering and new ways to build.",
     delay: 0.45,
   },
   {
-    text: "But at the same time, I realized that as a person, I want to present a more complete version of myself — not just someone defined by writing code.",
+    text: "The work matters to me. So does the person doing it, and the people it might help.",
     delay: 0.6,
   },
 ];
@@ -37,7 +37,6 @@ export default function TheShift() {
 
   return (
     <section ref={ref} className="relative py-20 md:py-28 overflow-hidden">
-      {/* Uphill feel — subtle upward gradient */}
       <div
         className="absolute inset-0"
         style={{
@@ -46,7 +45,6 @@ export default function TheShift() {
         }}
       />
 
-      {/* Path dots for exploration feel */}
       <div className="absolute left-8 top-0 bottom-0 w-px bg-[var(--color-border)] opacity-30" />
       <motion.div
         animate={{ scaleY: [1, 1.15, 1], opacity: [0.3, 0.6, 0.3] }}
