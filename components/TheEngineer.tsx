@@ -20,44 +20,44 @@ const capabilities = [
 
 export default function TheEngineer() {
   return (
-    <section id="engineer" className="py-20 md:py-28 px-6">
-      <div className="max-w-2xl mx-auto">
+    <section id="engineer" className="px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-accent)] mb-5">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
             The Engineer
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-black leading-tight text-[var(--color-text)] mb-6">
+          <h2 className="mb-6 text-4xl font-black leading-tight text-[var(--color-text)] md:text-5xl">
             I build software.
             <br />
             I care what it makes possible.
           </h2>
 
-          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-lg">
-            I&apos;m Aoda, a frontend-focused full-stack engineer with 9+ years
-            of experience. My foundation is in React, TypeScript, and frontend
-            architecture; I also build backend systems and apply AI engineering
-            to complex software development challenges.
+          <p className="mb-10 max-w-lg text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
+            I enjoy turning complex problems into clear, dependable products.
+            Over the past 9+ years, I&apos;ve grown from frontend-focused
+            development into full-stack engineering, while continuing to
+            explore how AI can improve the way software is built.
           </p>
 
           <div className="mb-4">
-            <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-text-muted)]">
-              Areas of expertise
+            <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+              What I work with
             </h3>
           </div>
 
-          <div className="border-y border-[var(--color-border)] divide-y divide-[var(--color-border)]">
+          <div className="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
             {capabilities.map((capability) => (
               <div key={capability.title} className="py-5">
-                <h3 className="text-sm font-semibold text-[var(--color-text)] mb-1.5">
+                <h3 className="mb-1.5 text-sm font-semibold text-[var(--color-text)]">
                   {capability.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">
                   {capability.detail}
                 </p>
               </div>
@@ -65,26 +65,25 @@ export default function TheEngineer() {
           </div>
 
           <div className="mt-9 rounded-2xl border border-[var(--color-border)] p-5 md:p-6">
-            <p className="text-xs font-bold tracking-[0.16em] uppercase text-[var(--color-accent)] mb-3">
-              A work in progress
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-accent)]">
+              Personal project
             </p>
-            <h3 className="text-lg font-semibold text-[var(--color-text)] mb-2">
+            <h3 className="mb-2 text-lg font-semibold text-[var(--color-text)]">
               PawHaven
             </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
+            <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
               A rescue-animal platform I&apos;m building to help bring people
-              and animals in need closer together. It&apos;s also where I put
-              architecture, product thinking, and AI-assisted engineering into
-              practice.
+              and animals in need closer together. It brings together product
+              thinking, full-stack architecture, and AI-assisted development.
             </p>
             <a
               href="https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
             >
               Explore the project
-              <FaArrowUpRightFromSquare className="w-3 h-3" />
+              <FaArrowUpRightFromSquare className="h-3 w-3" />
             </a>
           </div>
 
@@ -93,18 +92,18 @@ export default function TheEngineer() {
               href="https://github.com/aoda-zhang"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
             >
-              <FaGithub className="w-4 h-4" />
+              <FaGithub className="h-4 w-4" />
               GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/aodazhang"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
             >
-              <FaLinkedin className="w-4 h-4" />
+              <FaLinkedin className="h-4 w-4" />
               LinkedIn
             </a>
           </div>
