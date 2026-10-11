@@ -12,7 +12,7 @@ const experiences = [
       "Build enterprise investment applications across frontend architecture, shared UI foundations, and backend service integration.",
     highlights: [
       "Led design-token implementation across five microfrontend services, standardizing styling and reducing frontend styling issues by at least 30%.",
-      "Refactored a legacy React PDF reporting module, reducing development time for new reports by 40%; designed a component-library architecture with AI-powered review and maintenance.",
+      "Refactored a legacy React PDF reporting module, reducing development time for new reports by 40%; designed an AI-supported component library and contributed to fund-trading modules used by 3,000+ fund managers and millions of investors.",
     ],
   },
   {
