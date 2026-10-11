@@ -2,17 +2,29 @@ import type { ReactNode } from "react";
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "Aoda Zhang — Full-Stack Developer",
+  title: "Aoda Zhang — Software Engineer | React, TypeScript & AI",
   description:
-    "Full-stack developer with 9+ years of experience building web and mobile applications with React, Node.js, and TypeScript.",
+    "Aoda Zhang is a frontend-focused full-stack engineer with 9+ years of experience in React, TypeScript, frontend architecture, Node.js, and AI engineering.",
   keywords: [
     "Aoda Zhang",
-    "Full-Stack Developer",
+    "Software Engineer",
+    "Frontend Engineer",
+    "Full-Stack Engineer",
     "React",
     "TypeScript",
+    "Frontend Architecture",
     "Node.js",
+    "AI Engineering",
   ],
   authors: [{ name: "Aoda Zhang", url: "https://aoda.vercel.app" }],
+  openGraph: {
+    title: "Aoda Zhang — Software Engineer",
+    description:
+      "Building thoughtful software across frontend architecture, full-stack systems, and AI engineering.",
+    url: "https://aoda.vercel.app",
+    siteName: "Aoda Zhang",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
