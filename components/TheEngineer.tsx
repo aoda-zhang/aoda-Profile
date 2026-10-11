@@ -6,15 +6,15 @@ import { FaGithub, FaLinkedin, FaArrowUpRightFromSquare } from "react-icons/fa6"
 const capabilities = [
   {
     title: "Frontend engineering",
-    detail: "React · TypeScript · UI architecture · Design systems",
+    detail: "React · TypeScript · Frontend architecture · Reusable component libraries · Design systems",
   },
   {
     title: "Full-stack development",
-    detail: "Node.js · NestJS · APIs · Data and service integration",
+    detail: "Node.js · NestJS · API design · Service integration · Data-driven applications",
   },
   {
     title: "AI engineering",
-    detail: "LLM-powered workflows · Agent harnesses · Developer tooling",
+    detail: "LLM integration · Agent harnesses and workflows · AI-assisted development tools · Engineering automation",
   },
 ];
 
@@ -39,11 +39,17 @@ export default function TheEngineer() {
           </h2>
 
           <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-10 max-w-lg">
-            I&apos;m a frontend-focused full-stack engineer with 9+ years of
-            experience, specializing in React, TypeScript, and frontend
-            architecture. I also build backend systems and explore how AI can
-            help solve complex engineering problems.
+            I&apos;m Aoda, a frontend-focused full-stack engineer with 9+ years
+            of experience. My foundation is in React, TypeScript, and frontend
+            architecture; I also build backend systems and apply AI engineering
+            to complex software development challenges.
           </p>
+
+          <div className="mb-4">
+            <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[var(--color-text-muted)]">
+              Areas of expertise
+            </h3>
+          </div>
 
           <div className="border-y border-[var(--color-border)] divide-y divide-[var(--color-border)]">
             {capabilities.map((capability) => (
