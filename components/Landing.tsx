@@ -48,7 +48,7 @@ export default function Landing() {
           transition={{ delay: 0.7, duration: 0.8, ease: "easeOut" }}
           className="mt-5 text-2xl font-semibold leading-snug text-[var(--color-text)] sm:text-3xl md:text-4xl"
         >
-          Frontend-Focused Full-Stack Engineer
+          Full-stack Software Engineer
         </motion.p>
 
         <motion.p
@@ -57,7 +57,7 @@ export default function Landing() {
           transition={{ delay: 0.9, duration: 0.8, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-text-secondary)] md:text-xl"
         >
-          9+ years building thoughtful, user-focused software — from frontend architecture and full-stack products to exploring practical AI engineering.
+          9+ years building enterprise fintech and e-commerce applications, specializing in React and TypeScript with hands-on Node.js backend experience.
         </motion.p>
 
         <motion.p
@@ -66,7 +66,7 @@ export default function Landing() {
           transition={{ delay: 1.1, duration: 0.7, ease: "easeOut" }}
           className="mt-4 text-base text-[var(--color-text-muted)] md:text-lg"
         >
-          A journey through code and life, guided by curiosity and a love of the outdoors.
+          Frontend architecture · Full-stack products · AI-powered engineering tools
         </motion.p>
 
         <motion.button

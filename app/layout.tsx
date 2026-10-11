@@ -4,7 +4,7 @@ import "../styles/globals.css";
 export const metadata = {
   title: "Aoda Zhang — Software Engineer | React, TypeScript & AI",
   description:
-    "Aoda Zhang is a frontend-focused full-stack engineer with 9+ years of experience in React, TypeScript, frontend architecture, Node.js, and AI engineering.",
+    "Aoda Zhang is a full-stack software engineer with 9+ years of experience in enterprise fintech and e-commerce, specializing in React, TypeScript, frontend architecture, Node.js, and AI-powered engineering tools.",
   keywords: [
     "Aoda Zhang",
     "Software Engineer",

@@ -7,8 +7,8 @@ const projects = [
   {
     title: "PawHaven",
     description:
-      "Open-source platform for stray animal rescue. Report, track, and share cases from sighting to adoption. Features AI breed identification, real-time tracking, and donation integration.",
-    tech: ["React", "NestJS", "TypeScript", "Turbo", "pnpm"],
+      "An open-source animal rescue platform in active development, built end to end with a modular full-stack architecture. The project brings together product design, reusable components, and an AI-powered engineering harness for development workflows, testing, and code review.",
+    tech: ["React", "TypeScript", "Node.js", "NestJS", "MongoDB", "pnpm"],
     github: "https://github.com/aoda-zhang/PawHaven-FullStack-React-NodeJS",
     demo: "https://pawhaven.work",
     accent: "#f59e0b",

@@ -5,15 +5,15 @@ import { motion, easeOut } from "framer-motion";
 const skillGroups = [
   {
     label: "Frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue", "Redux"],
+    skills: ["React", "TypeScript", "JavaScript (ES6+)", "Frontend architecture", "Design systems", "Microfrontends", "Redux", "Vue"],
   },
   {
     label: "Backend",
-    skills: ["Node.js", "NestJS", "Express", "MongoDB", "PostgreSQL"],
+    skills: ["Node.js", "Express.js", "NestJS", "REST APIs", "MongoDB", "Service integration"],
   },
   {
-    label: "Mobile & DevOps",
-    skills: ["React Native", "Expo", "Docker", "Git", "AWS", "CI/CD"],
+    label: "Mobile & Engineering Tools",
+    skills: ["React Native", "Git", "GitHub", "Figma", "Jira", "Confluence", "AI-powered development tools"],
   },
 ];
 
