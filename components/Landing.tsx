@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaArrowDown } from "react-icons/fa6";
-import { babyImages } from "@/data/mockImages";
+import { hikeImages } from "@/data/mockImages";
 
 export default function Landing() {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,8 +28,8 @@ export default function Landing() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={babyImages[0].src}
-          alt="hero"
+          src={hikeImages[0].src}
+          alt={hikeImages[0].alt}
           className="w-full h-full object-cover"
         />
         {/* Dark overlay so text stays readable */}
