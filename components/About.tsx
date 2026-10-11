@@ -48,7 +48,7 @@ export default function About() {
             I&apos;m a full-stack software engineer with 9+ years of experience building enterprise fintech and e-commerce applications. My core strengths are React, TypeScript, frontend architecture, and reusable component systems, complemented by hands-on Node.js backend development, API design, and service integration.
           </p>
           <p className="text-zinc-600 leading-relaxed">
-            I also build beyond my day job. PawHaven is my open-source animal rescue platform, where I bring together product thinking, full-stack architecture, and AI-powered engineering workflows. I care about building maintainable software that solves practical problems. I dedicate time to{" "}
+            Outside work, I build PawHaven, an open-source animal rescue platform that combines product thinking, full-stack architecture, and AI-powered engineering workflows. I care about creating maintainable software that solves practical problems. I spend time on{" "}
             <a
               href="https://pawhaven.work"
               target="_blank"
