@@ -9,36 +9,33 @@ const experiences = [
     company: "Manulife",
     period: "2022 — Present",
     summary:
-      "Build and evolve enterprise financial applications, combining frontend engineering with backend services and API integration.",
+      "Build and evolve enterprise financial applications, combining frontend product work with backend services and API integration.",
     highlights: [
       "Contributed to investment experiences serving 50,000+ customers, supporting a reported 65% investment conversion rate.",
-      "Work across React, TypeScript, Node.js, and service integrations to deliver maintainable product features.",
+      "Delivered features across application boundaries, connecting user-facing workflows with backend capabilities.",
     ],
-    tech: ["React", "TypeScript", "Node.js", "NestJS", "API integration"],
   },
   {
     title: "Senior Frontend Engineer",
     company: "Newegg",
     period: "2021 — 2022",
     summary:
-      "Focused on frontend delivery, reusable UI foundations, and building maintainable interfaces for product teams.",
+      "Focused on improving frontend delivery and making shared UI foundations more effective for product teams.",
     highlights: [
       "Built and improved a shared library of 50+ reusable components, helping reduce feature delivery time by 35%.",
-      "Worked with React and TypeScript to improve consistency and speed across frontend development.",
+      "Improved consistency across interfaces by building reusable patterns instead of solving the same UI problems repeatedly.",
     ],
-    tech: ["React", "TypeScript", "Component architecture", "Frontend performance"],
   },
   {
     title: "Frontend Engineer",
     company: "Hucai",
     period: "2017 — 2021",
     summary:
-      "Built web application interfaces and reusable frontend functionality, developing a strong foundation in product-focused engineering.",
+      "Built practical web application features and reusable interfaces for day-to-day business workflows.",
     highlights: [
       "Delivered e-commerce cart and inventory functionality for an application serving 2,000+ daily users.",
       "Contributed to an employee attendance platform used by 1,000+ employees, helping reduce manual HR workload by approximately 60%.",
     ],
-    tech: ["JavaScript", "React", "Vue", "REST APIs", "Reusable components"],
   },
 ];
 
@@ -57,12 +54,11 @@ export default function Experience() {
             Career
           </p>
           <h2 className="mb-5 text-3xl font-black leading-tight text-[var(--color-text)] md:text-4xl">
-            Professional experience
+            Where I&apos;ve made an impact
           </h2>
           <p className="text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
-            From frontend engineering to full-stack delivery, I&apos;ve spent
-            9+ years building web products, improving engineering foundations,
-            and solving practical problems for users and teams.
+            A look at the products, platforms, and engineering improvements I&apos;ve
+            contributed to throughout my career.
           </p>
         </motion.div>
 
@@ -99,7 +95,7 @@ export default function Experience() {
                 {experience.summary}
               </p>
 
-              <ul className="mb-5 space-y-2">
+              <ul className="space-y-2">
                 {experience.highlights.map((highlight) => (
                   <li
                     key={highlight}
@@ -110,14 +106,6 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
-
-              <div className="flex flex-wrap gap-2">
-                {experience.tech.map((technology) => (
-                  <span key={technology} className="tag">
-                    {technology}
-                  </span>
-                ))}
-              </div>
             </motion.article>
           ))}
         </div>
