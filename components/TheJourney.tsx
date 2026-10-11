@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { hikeImages } from "@/data/mockImages";
+import { hikeImages } from "@/data/photos";
 
 export default function TheJourney() {
   return (

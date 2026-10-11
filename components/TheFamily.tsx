@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { babyImages } from "@/data/mockImages";
+import { babyImages } from "@/data/photos";
 
 export default function TheFamily() {
   return (

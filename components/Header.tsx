@@ -32,7 +32,7 @@ export default function Header() {
           <div className="flex items-center gap-5">
             <a
               href="/aoda-zhang.pdf"
-              download
+              download="Aoda-Zhang-Full-stack-Software-Engineer.pdf"
               className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
             >
               <FaDownload className="w-3.5 h-3.5" />

@@ -84,7 +84,11 @@ export default function Hero() {
             <FaEnvelope className="w-4 h-4" />
             Say Hello
           </a>
-          <a href="/aoda-zhang.pdf" download className="btn btn-ghost">
+          <a
+            href="/aoda-zhang.pdf"
+            download="Aoda-Zhang-Full-stack-Software-Engineer.pdf"
+            className="btn btn-ghost"
+          >
             Resume
           </a>
           <a
