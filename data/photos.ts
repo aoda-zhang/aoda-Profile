@@ -7,12 +7,12 @@ export interface Photo {
 export const hikeImages: Photo[] = [
   {
     src: "/assets/hike/hike-01.jpg",
-    alt: "Hiking a mountain trail with a loaded backpack",
+    alt: "Standing below snow-covered peaks under a blue sky",
     caption: "Every step on the trail reminds me that life is not standing still.",
   },
   {
     src: "/assets/hike/hike-02.jpg",
-    alt: "Standing below snow-covered peaks under a blue sky",
+    alt: "Hiking a mountain trail with a loaded backpack",
     caption: "Instead of scrolling, we walk.",
   },
   {
